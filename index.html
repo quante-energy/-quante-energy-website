@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>QuantE Energy</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="QuantE Energy">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="application-name" content="QuantE Energy">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .clearfix,
+        .sidebar-social::after {
+            content: "";
+            display: table;
+            clear: both
+        }
+
+        .color-transition,
+        body,
+        p,
+        hr,
+        .hr,
+        .hr-after::after,
+        .hr-bottom,
+        .message,
+        .note-sm,
+        .note,
+        #markdown-toc,
+        .navbar,
+        .nav-btn-bar,
+        .nav-btn,
+        .content .avatar {
+            transition: none
+        }
+
+        html {
+            --font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif;
+            --font-family-heading: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif;
+            --code-font-family: ui-monospace, Menlo, Monaco, Cascadia Mono, Segoe UI Mono, Roboto Mono, Oxygen Mono, Ubuntu Monospace, Source Code Pro, Fira Mono, Droid Sans Mono, Courier New, monospace;
+            --body-color: #333;
+            --body-bg: #fff;
+            --border-color: #ebebeb;
+            --gray: #777;
+            --gray-bg: rgba(0, 0, 0, 0.025);
+            --gray-text: #666;
+            --menu-text: #bbb;
+            --inv-body-color: #ccc;
+            --inv-body-bg: #282828;
+            --root-font-size: 15px;
+            --root-font-size-medium: 16px;
+            --root-font-size-large: 17px;
+            --root-font-size-print: 8pt;
+            --root-line-height: 1.75;
+            --font-weight: 400;
+            --font-weight-bold: 700;
+            --font-weight-heading: 700;
+            --content-width-5: 54rem;
+            --content-margin-5: 4rem;
+            --sidebar-width: 21rem;
+            --half-content: 31rem;
+            --break-point-3: 64em;
+            --break-point-5: 86em;
+            --break-point-dynamic: 1664px
+        }
+
+        html .content {
+            -webkit-font-smoothing: initial;
+            -moz-osx-font-smoothing: initial
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            font-family: var(--font-family);
+            font-size: var(--root-font-size);
+            line-height: var(--root-line-height)
+        }
+
+        body {
+            color: var(--body-color);
+            background-color: var(--body-bg);
+            font-weight: var(--font-weight);
+            overflow-y: scroll
+        }
+
+        .content img,
+        .img,
+        .content video,
+        .video {
+            max-width: 100%;
+            height: auto
+        }
+
+        .lead {
+            margin-left: -1rem;
+            margin-right: -1rem;
+            margin-bottom: 1.5rem
+        }
+
+        img.lead,
+        video.lead {
+            display: block;
+            max-width: calc(100% + 2rem);
+            width: calc(100% + 2rem);
+            height: auto
+        }
+
+        .heading,
+        .f1,
+        h1,
+        .h1,
+        .f2,
+        h2,
+        .h2,
+        .f3,
+        h3,
+        .h3,
+        .f4,
+        h4,
+        .h4,
+        .post-date,
+        .sidebar-nav-item,
+        .f5,
+        h5,
+        .h5,
+        .f6,
+        h6,
+        .h6 {
+            font-family: var(--font-family-heading);
+            font-weight: var(--font-weight-heading)
+        }
+
+        .f1,
+        h1,
+        .h1 {
+            font-size: 2rem;
+            line-height: 1.3
+        }
+
+        .f2,
+        h2,
+        .h2 {
+            font-size: 1.5rem;
+            line-height: 1.4
+        }
+
+        .f3,
+        h3,
+        .h3 {
+            font-size: 1.2em;
+            line-height: 1.5
+        }
+
+        .f4,
+        h4,
+        .h4,
+        .post-date,
+        .sidebar-nav-item {
+            font-size: 1.08rem;
+            line-height: 1.6
+        }
+
+        .f5,
+        h5,
+        .h5 {
+            font-size: 1.04rem;
+            line-height: 1.7
+        }
+
+        .f6,
+        h6,
+        .h6 {
+            font-size: 1rem
+        }
+
+        .content h1>a,
+        .content .h1>a {
+            text-decoration: none;
+            border-bottom: none
+        }
+
+        @media screen and (max-width: 42em) {
+
+            .content h1,
+            .content .h1 {
+                font-size: 1.7rem;
+                line-height: 1.35
+            }
+        }
+
+        @media screen and (min-width: 86em) {
+
+            .content h1,
+            .content .h1 {
+                font-size: 2.4rem;
+                line-height: 1.25
+            }
+        }
+
+        @media screen and (min-width: 1664px) {
+
+            body:not(.no-large-headings) .content h1,
+            body:not(.no-large-headings) .content .h1 {
+                width: calc(100% + 50vw - 32rem);
+                font-size: 3rem;
+                line-height: 1.2
+            }
+        }
+
+        @media screen and (min-width: 124em) {
+
+            body:not(.no-large-headings) .content h1,
+            body:not(.no-large-headings) .content .h1 {
+                font-size: 4rem;
+                line-height: 1.1
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        .h1,
+        .h2,
+        .h3 {
+            margin: 4rem 0 1rem
+        }
+
+        h4,
+        h5,
+        h6,
+        .h4,
+        .post-date,
+        .h5,
+        .h6 {
+            margin: 3rem 0 .5rem
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem
+        }
+
+        p.lead {
+            font-size: 1.2em;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem
+        }
+
+        ul,
+        ol,
+        dl {
+            margin-top: 0;
+            margin-bottom: 1rem
+        }
+
+        ul,
+        ol {
+            padding-left: 1.25rem
+        }
+
+        hr,
+        .hr {
+            border: 0;
+            margin: 1rem 0;
+            border-top: 1px solid var(--border-color)
+        }
+
+        .hr-after::after {
+            content: "";
+            display: block;
+            margin: 1rem 0;
+            border-top: 1px solid var(--border-color)
+        }
+
+        .hr-bottom {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: .75rem;
+            margin-bottom: 1rem
+        }
+
+        .page {
+            margin-bottom: 3em
+        }
+
+        .page li+li {
+            margin-top: .25rem
+        }
+
+        .page>header {
+            position: relative;
+            margin-bottom: 2rem
+        }
+
+        @media screen and (min-width: 1664px) {
+
+            body:not(.no-third-column) .page>header>.lead+.note-sm,
+            body:not(.no-third-column) .page>header>.lead+.note,
+            body:not(.no-third-column) .page>header>.lead+#markdown-toc,
+            body:not(.no-third-column) .page>header>a.no-hover+.note-sm,
+            body:not(.no-third-column) .page>header>a.no-hover+.note,
+            body:not(.no-third-column) .page>header>a.no-hover+#markdown-toc {
+                position: absolute;
+                right: -25rem;
+                width: 21rem;
+                bottom: 0;
+                margin-bottom: 0
+            }
+        }
+
+        .page-title,
+        .post-title {
+            margin-top: 0
+        }
+
+        .post-date {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -.6rem;
+            height: 2rem;
+            margin-bottom: .85rem;
+            color: var(--gray)
+        }
+
+        .post-date>.ellipsis,
+        #breadcrumbs.post-date>ul {
+            cursor: pointer
+        }
+
+        /* .post-date [class^="icon-"] {
+            display: inline-block;
+            font-size: smaller;
+            margin-right: .25rem
+        } */
+
+        .related-posts {
+            padding-left: 0;
+            list-style: none;
+            margin-bottom: 2rem
+        }
+
+        .related-posts>li,
+        .related-posts>li+li {
+            margin-top: 1rem
+        }
+
+        .message,
+        .note-sm,
+        .note,
+        #markdown-toc {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            color: var(--gray-text);
+            background-color: var(--gray-bg);
+            margin-left: -1rem;
+            margin-right: -1rem
+        }
+
+        .note-sm,
+        .note,
+        #markdown-toc {
+            background: transparent;
+            color: var(--body-color);
+            font-size: smaller;
+            border-left: 1px solid var(--border-color);
+            padding: 1.2rem 1rem 0 1rem;
+            margin: 1rem -1rem;
+            position: relative
+        }
+
+        .note-sm:before,
+        .note:before,
+        #markdown-toc:before {
+            font-size: 0.667rem;
+            font-weight: bold;
+            font-style: normal;
+            letter-spacing: .025rem;
+            text-transform: uppercase;
+            color: var(--menu-text);
+            position: absolute;
+            top: 0
+        }
+
+        .note-sm[title]:before,
+        [title].note:before,
+        [title]#markdown-toc:before {
+            content: attr(title) !important
+        }
+
+        .note {
+            font-size: 1rem
+        }
+
+        @media screen {
+            body::before {
+                content: '';
+                width: .5rem;
+                background: var(--gray-bg);
+                position: fixed;
+                left: 0;
+                top: 0;
+                bottom: 0
+            }
+        }
+
+        @media (min-width: 64em) {
+            body::before {
+                width: 21rem
+            }
+        }
+
+        @media (min-width: 1664px) {
+            body::before {
+                width: calc(50% - 31rem)
+            }
+        }
+
+        @media screen and (min-width: 42em) {
+            html {
+                font-size: var(--root-font-size-medium)
+            }
+        }
+
+        @media screen and (min-width: 124em) {
+            html {
+                font-size: var(--root-font-size-large)
+            }
+        }
+
+        #breadcrumbs>ul {
+            height: 1rem;
+            margin: -1.5rem 0 .5rem;
+            padding: 0;
+            font-size: .667rem;
+            color: var(--menu-text);
+            text-transform: uppercase;
+            width: 100%;
+            list-style: none
+        }
+
+        #breadcrumbs>ul>li {
+            display: inline
+        }
+
+        #breadcrumbs>ul>li a {
+            color: var(--gray);
+            text-decoration: none;
+            border-bottom: none
+        }
+
+        .fl {
+            float: left
+        }
+
+        .fr {
+            float: right
+        }
+
+        .mb4 {
+            margin-bottom: 4rem
+        }
+
+        .mb6 {
+            margin-bottom: 6rem
+        }
+
+        .mt0 {
+            margin-top: 0
+        }
+
+        .mt1 {
+            margin-top: 1rem
+        }
+
+        .mt2 {
+            margin-top: 2rem
+        }
+
+        .mt3 {
+            margin-top: 3rem
+        }
+
+        .mt4 {
+            margin-top: 4rem
+        }
+
+        .pb0 {
+            padding-bottom: 0
+        }
+
+        .ml1 {
+            margin-left: 1rem
+        }
+
+        .mr1 {
+            margin-right: 1rem
+        }
+
+        .sixteen-nine {
+            position: relative
+        }
+
+        .sixteen-nine::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: 56.25%
+        }
+
+        .sixteen-nine>* {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0
+        }
+
+        .sixteen-ten {
+            position: relative
+        }
+
+        .sixteen-ten::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: 62.5%
+        }
+
+        .sixteen-ten>* {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0
+        }
+
+        .four-three {
+            position: relative
+        }
+
+        .four-three::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: 75%
+        }
+
+        .four-three>* {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0
+        }
+
+        .sr-only {
+            display: none
+        }
+
+        .larger {
+            font-size: larger
+        }
+
+        .smaller {
+            font-size: smaller
+        }
+
+        .clearfix,
+        .sidebar-social::after {
+            content: "";
+            display: table;
+            clear: both
+        }
+
+        .ellipsis,
+        #breadcrumbs>ul {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .border {
+            border: 1px solid var(--border-color)
+        }
+
+        @media (min-width: 42em) {
+
+            .border-radius,
+            .lead,
+            .page .aspect-ratio.sixteen-nine.lead {
+                border-radius: .5rem
+            }
+        }
+
+        .fallback-img {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjkwIiB2aWV3Qm94PSIwIDAgMTYwIDkwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxnIHRyYW5zZm9ybT0ibWF0cml4KDAuMDQ4ODI4LCAwLCAwLCAwLjA0Nzk5MSwgNTQuOTk5OTczLCAyMC40MjgxNDgpIj4KICAgIDxwYXRoIHN0eWxlPSJmaWxsOnJnYmEoMTI4LDEyOCwxMjgsLjMzKSIgZD0iTTk1OS44ODQgMTI4YzAuMDQwIDAuMDM0IDAuMDgyIDAuMDc2IDAuMTE2IDAuMTE2djc2Ny43N2MtMC4wMzQgMC4wNDAtMC4wNzYgMC4wODItMC4xMTYgMC4xMTZoLTg5NS43N2MtMC4wNDAtMC4wMzQtMC4wODItMC4wNzYtMC4xMTQtMC4xMTZ2LTc2Ny43NzJjMC4wMzQtMC4wNDAgMC4wNzYtMC4wODIgMC4xMTQtMC4xMTRoODk1Ljc3ek05NjAgNjRoLTg5NmMtMzUuMiAwLTY0IDI4LjgtNjQgNjR2NzY4YzAgMzUuMiAyOC44IDY0IDY0IDY0aDg5NmMzNS4yIDAgNjQtMjguOCA2NC02NHYtNzY4YzAtMzUuMi0yOC44LTY0LTY0LTY0djB6Ii8+CiAgICA8cGF0aCBzdHlsZT0iZmlsbDpyZ2JhKDEyOCwxMjgsMTI4LC4zMykiIGQ9Ik04MzIgMjg4YzAgNTMuMDIwLTQyLjk4IDk2LTk2IDk2cy05Ni00Mi45OC05Ni05NiA0Mi45OC05NiA5Ni05NiA5NiA0Mi45OCA5NiA5NnoiLz4KICAgIDxwYXRoIHN0eWxlPSJmaWxsOnJnYmEoMTI4LDEyOCwxMjgsLjMzKSIgZD0iTTg5NiA4MzJoLTc2OHYtMTI4bDIyNC0zODQgMjU2IDMyMGg2NGwyMjQtMTkyeiIvPgogIDwvZz4KPC9zdmc+")
+        }
+
+        hy-push-state a {
+            color: var(--body-color)
+        }
+
+        @supports not ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
+            hy-push-state a {
+                text-decoration: none;
+                border-bottom: 2px solid
+            }
+        }
+
+        @supports (text-decoration-thickness: initial) and (text-underline-offset: initial) {
+            hy-push-state a {
+                text-decoration-style: solid;
+                text-underline-offset: .35rem;
+                text-decoration-thickness: 2px
+            }
+        }
+
+        hy-push-state a.no-hover {
+            border-bottom: none;
+            text-decoration-thickness: unset;
+            text-underline-offset: unset
+        }
+
+        .content a:not(.btn):not(.no-hover) {
+            border-color: var(--accent-color-faded)
+        }
+
+        @supports (text-decoration-thickness: initial) and (text-underline-offset: initial) {
+            .content a:not(.btn):not(.no-hover) {
+                text-decoration-color: var(--accent-color-faded)
+            }
+        }
+
+        .content .aspect-ratio {
+            overflow: hidden
+        }
+
+        .content .aspect-ratio img {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--gray-bg)
+        }
+
+        hy-drawer {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            z-index: 4
+        }
+
+        @media screen and (min-width: 64em) {
+            hy-drawer {
+                position: fixed;
+                width: 21rem;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                margin-left: 0
+            }
+
+            hy-drawer.cover {
+                position: relative;
+                width: 100%
+            }
+        }
+
+        @media screen and (min-width: 1664px) {
+            hy-drawer {
+                width: calc(50% - 31rem)
+            }
+        }
+
+        .sidebar {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.75);
+            text-align: center;
+            min-height: 100vh
+        }
+
+        .sidebar.invert {
+            color: rgba(32, 32, 32, 0.75)
+        }
+
+        .sidebar a {
+            color: #fff;
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+            text-decoration-color: rgba(255, 255, 255, 0.2)
+        }
+
+        .sidebar.invert a {
+            color: #222;
+            border-bottom-color: rgba(32, 32, 32, 0.2);
+            text-decoration-color: rgba(32, 32, 32, 0.2)
+        }
+
+        .sidebar-bg {
+            position: absolute;
+            top: 0;
+            left: calc(50% - 50vw);
+            width: 100vw;
+            height: 100%;
+            background: #202020 center / cover
+        }
+
+        .sidebar-bg::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.05)
+        }
+
+        .sidebar-bg.sidebar-overlay::after {
+            background: linear-gradient(to bottom, rgba(32, 32, 32, 0) 0%, rgba(32, 32, 32, 0.5) 50%, rgba(32, 32, 32, 0) 100%)
+        }
+
+        .sidebar-sticky {
+            position: relative;
+            z-index: 3;
+            max-width: 21rem;
+            padding: 1.5rem;
+            contain: content
+        }
+
+        .sidebar-about .avatar {
+            margin-bottom: 1.5rem
+        }
+
+        .sidebar-about>a.sidebar-title {
+            text-decoration: none
+        }
+
+        .sidebar-about>a.sidebar-title>h2 {
+            margin: 0;
+            padding-bottom: .5rem
+        }
+
+        /* .sidebar-about>a.sidebar-title::after {
+            content: '';
+            display: block;
+            border-bottom: 2px solid;
+            margin: 0 auto .5rem;
+            width: 4rem;
+            border-color: rgba(255, 255, 255, 0.2);
+            transition: border-color 250ms
+        } */
+
+        /* .sidebar-about>a.sidebar-title:hover::after {
+            border-color: #fff;
+            transition: border-color 50ms
+        } */
+
+        /* .sidebar.invert .sidebar-about>a.sidebar-title::after {
+            border-color: rgba(32, 32, 32, 0.2)
+        }
+
+        .sidebar.invert .sidebar-about>a.sidebar-title:hover::after {
+            border-color: #222
+        } */
+
+        .sidebar-nav>ul {
+            list-style: none;
+            padding-left: 0
+        }
+
+        .sidebar-nav-item {
+            display: inline-block;
+            margin-bottom: .5rem;
+            text-decoration: none
+        }
+
+        @media (min-width: 64em) {
+            #_main.no-drawer #_menu {
+                display: none
+            }
+
+            #_main.no-drawer .nav-btn-bar>:nth-child(2) {
+                border: none
+            }
+        }
+
+        .sidebar-social>ul {
+            display: inline-block;
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0
+        }
+
+        .sidebar-social>ul>li {
+            float: left
+        }
+
+        .sidebar-social>ul>li>a {
+            display: inline-block;
+            text-align: center;
+            font-size: 1.4rem;
+            width: 3rem;
+            height: 4rem;
+            /* padding: .5rem 0;
+            line-height: 3rem;
+            text-decoration: none;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            position: relative; 
+            display: block;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 43px;
+            border-radius: 50%;
+            font-size: 30px;
+            transition: .5s;  */
+            transition: all .3s ease-in-out;
+        }
+
+        .sidebar-social>ul>li>a:hover {
+            transform: scale(1.7);
+        }
+
+        .sidebar-social>ul li+li {
+            margin-top: 0
+        }
+
+
+
+        .fixed-common,
+        .fixed-top,
+        .fixed-bottom {
+            position: fixed;
+            left: 0;
+            width: 100%;
+            z-index: 2
+        }
+
+        .fixed-top {
+            top: 0
+        }
+
+        .fixed-bottom {
+            bottom: 0
+        }
+
+        .navbar>.content {
+            position: relative;
+            padding-top: 0;
+            padding-bottom: 0;
+            min-height: 0;
+            max-height: 5rem
+        }
+
+        .nav-btn-bar {
+            margin: 0 -1rem;
+            background-color: white;
+            background-color: var(--body-bg);
+            height: 5rem;
+            display: flex;
+            align-items: center;
+            position: relative
+        }
+
+        .nav-btn-bar>:first-child,
+        .nav-btn-bar>:last-child {
+            border: none
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.25rem;
+            height: 5rem;
+            /* border-right: 1px solid  #bbb;
+            border-left: 1px solid  #bbb; */
+            margin-left: -1px;
+            box-shadow: inset 0 0 1px #bbb;
+        }
+
+        .nav-btn:hover {
+            background-color: #f8f7f7;
+        }
+
+        #markdown-toc {
+            margin: 2rem -1rem 2rem calc(-1rem + 1px);
+            padding-left: 2.5rem;
+            padding-bottom: .5rem
+        }
+
+        #markdown-toc:before {
+            left: 1rem
+        }
+
+        @media screen and (min-width: 1664px) {
+            body:not(.no-toc) #markdown-toc {
+                position: absolute;
+                z-index: 4;
+                width: 20.5rem;
+                right: 0;
+                margin: auto;
+                overflow: auto
+            }
+        }
+
+        @media screen and (min-width: 1664px) {
+            body.no-break-layout:not(.no-toc) #markdown-toc {
+                width: calc(50% - 31rem)
+            }
+        }
+
+        .content {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 8rem 1rem 12rem
+        }
+
+        @media screen {
+            .content {
+                padding-left: 1.5rem;
+                min-height: 100vh
+            }
+        }
+
+        @media screen and (min-width: 42em) {
+            .content {
+                max-width: 42rem
+            }
+        }
+
+        @media screen and (min-width: 54em) {
+            .content {
+                max-width: 48rem
+            }
+        }
+
+        @media screen and (min-width: 64em) {
+            .content {
+                padding-left: 1rem;
+                margin-left: 24rem;
+                margin-right: 3rem
+            }
+        }
+
+        @media screen and (min-width: 86em) {
+            .content {
+                padding-top: 9rem;
+                margin-left: 25rem;
+                margin-right: 4rem;
+                max-width: 54rem
+            }
+        }
+
+        @media screen and (min-width: 1664px) {
+            .content {
+                margin: auto
+            }
+        }
+
+        .large-only {
+            display: none
+        }
+
+        @media screen and (min-width: 1664px) {
+            .large-only {
+                display: block
+            }
+        }
+
+        .avatar {
+            width: 7rem;
+            height: 7rem;
+            border-radius: 100%;
+            overflow: hidden;
+            display: inline-block
+        }
+
+        .avatar img {
+            width: 100%
+        }
+
+        .content .avatar {
+            float: right;
+            box-sizing: content-box;
+            border: 1rem solid var(--body-bg);
+            transition: border-color 1s ease;
+            margin-top: -1.5rem;
+            margin-right: -1rem
+        }
+
+        .note:before {
+            content: "Note"
+        }
+
+        .page>header>.note-sm:before,
+        .page>header>.note:before,
+        .page>header>#markdown-toc:before {
+            content: "Description"
+        }
+
+        #markdown-toc:before {
+            content: "Table of Contents"
+        }
+
+        .layout-resume .note-sm:before,
+        .layout-resume .note:before,
+        .layout-resume #markdown-toc:before {
+            content: "Summary"
+        }
+
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffffff;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .navbar>.content::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: calc(100% - 6rem);
+            height: 5rem;
+            /* left: 3rem; */
+            margin: auto;
+            box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+            z-index: -1
+        }
+
+
+
+        .typing-demo {
+            /* width: 22ch; */
+            position: relative;
+            width: fit-content;
+            overflow: hidden;
+            /* border-right: .15em solid white; */
+            white-space: nowrap;
+            /* margin: 0 auto; */
+            /* letter-spacing: .15em; */
+            animation: typing 3.5s steps(100, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 100%
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: white
+            }
+        }
+
+        @keyframes blinking {
+
+            from,
+            to {
+                background: transparent;
+            }
+
+            50% {
+                background: black;
+            }
+        }
+    </style>
+    <!-- <link rel="preload" as="style" href="css/hydejack-9.1.6.css" id="_stylePreload"> -->
+    <!-- <link rel="preload" as="style" href="icomoon/style.css" id="_iconsPreload"> -->
+    <!-- <script> setRel('_stylePreload'); setRel('_iconsPreload'); /**/ </script> <noscript> -->
+    <!-- <link rel="stylesheet" href="css/hydejack-9.1.6.css"> -->
+    <!-- <link rel="stylesheet" href="icomoon/style.css"> -->
+    <!-- </noscript> -->
+    <style id="_pageStyle">
+        html {
+            --accent-color: rgb(0, 0, 0);
+            --accent-color-faded: rgba(0, 0, 0, 0.5);
+            --accent-color-highlight: rgba(0, 0, 0, 0.1);
+            --accent-color-darkened: #000;
+            --theme-color: rgb(8, 46, 57)
+        }
+    </style>
+
+    <style>
+        .overlay {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay a {
+            transition: 0.3s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        #_sidebar {
+            background-color: lightblue;
+            transition: width 0.3s ease;
+            /* Add transition for smooth resizing */
+        }
+
+        /* @media screen and (max-width: 1024px) {
+            #_sidebar {
+                width: 5%;
+            }
+        } */
+
+        .icon-menu:before {
+            content: "\2630";
+            font-size: 28px;
+            color: #000;
+        }
+
+        hr.dingbat {
+            border: 0
+        }
+
+        hr.dingbat:after {
+            content: "\2756";
+            display: block;
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--menu-text)
+        }
+
+        .expandable {
+            background: #fff;
+            overflow: hidden;
+            transition: all .5s ease-in-out;
+            line-height: 0;
+            /* padding: 0 1em; */
+            color: transparent;
+            max-height: 0;
+        }
+
+        .expandable.expand {
+            line-height: 1.5;
+            max-height: 2500px;
+            /* Adjust the value based on your content height */
+            padding-top: 0.1em;
+            padding-bottom: 0.1em;
+            color: black;
+        }
+
+        .bar3 div {
+            height: 4px;
+            background-color: rgb(63, 62, 62);
+            margin: 5px 0;
+            border-radius: 25px;
+            transition: 0.5s;
+        }
+
+        .bar3 {
+            width: 25px;
+            display: block;
+            /* margin: 1em 0 0 1em; */
+        }
+
+        .one {
+            width: 25px;
+        }
+
+        .two {
+            width: 15px;
+        }
+
+        .three {
+            width: 20px;
+        }
+
+        .bar3:hover div {
+            width: 25px;
+        }
+    </style>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.expand-link').click(function () {
+                var target = $(this).attr('href');
+                $(target).toggleClass('expand');
+                return false;
+            });
+        });
+    </script>
+
+    <style>
+        footer {
+            position: fixed;
+            bottom: 0;
+            /* left: 0; */
+            /* width: 100%; */
+            padding: 10px;
+            /* text-align: center; */
+            font-size: 15px;
+            color: #888;
+        }
+
+        footer p {
+            margin: 0;
+            text-align: left;
+        }
+    
+        @media only screen and (max-width: 480px) {
+        /* Allow the text to wrap on multiple lines */
+            .typing-demo {
+                white-space: normal;
+            }
+        }
+    </style>
+
+    <style>
+        .course-info {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .course-image {
+            float: left;
+            padding: 10px 30px 10px 10px;
+            width: 30%;
+        }
+
+        .course-details {
+            margin-top: 0;
+            margin-left: 10px;
+            width: 70%;
+        }
+        body::-webkit-scrollbar{
+          display: none;
+        }
+    </style>
+
+    <style>
+        .QuantE_Energy_article {
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            color: #228B22;
+            font-size: 28px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .QuantE_Energy_h2 {
+            color: #228B22;
+            font-size: 28px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .QuantE_Energy_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            position: relative;
+        }
+        .QuantE_Energy_box {
+            width: 250px;
+            border: 2px dashed black;
+            padding: 15px;
+            margin: 10px;
+            background-color: white;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            position: relative;
+        }
+        .icon {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .QuantE_Energy_building-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        .QuantE_Energy_building {
+            width: 100px;
+            height: 100px;
+            background-image: url('img/building.png');
+            background-size: cover;
+            display: inline-block;
+        }
+        .QuantE_Energy_question-mark {
+            top: 20px;
+            font-size: 40px;
+            font-weight: bolder;
+            color: red;
+            position: relative;
+        }
+        .QuantE_Energy_highlight {
+            background-color: #f8dcc2;
+            padding: 15px;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .L_shape_svg {
+            position: absolute;
+            top: calc(100% + 10px); /* Adjust distance below Budget */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="_navbar" class="navbar fixed-top">
+        <div class="content"> <span class="sr-only">Jump to:</span>
+            <div class="nav-btn-bar"> <a id="_menu" class="nav-btn no-hover " href="#" onclick="openNav()">
+                    <span class="sr-only">Navigation</span>
+                    <span class="bar3">
+
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+
+                    </span> </a>
+                <div class="nav-span"></div>
+            </div>
+        </div>
+    </div>
+
+    <header id="_sidebar" class="sidebar overlay" role="banner">
+        <div class="sidebar-bg sidebar-overlay"
+            style="background-color:rgb(0,0,0);background-image:url(img/sidebar-bg.jpg)"></div>
+        <div class="sidebar-sticky">
+            <div class="sidebar-about"> <a class="sidebar-title hover-underline-animation" href="#QuantE Energy"
+                    onclick="closeNav('QuantE Energy')">
+                    <h2 class="h1">QuantE Energy</h2>
+                </a>
+                <p> Innovative Energy Solutions <br>
+                    for Housing Societies</p>
+            </div>
+            <!-- <nav class="sidebar-nav heading" role="navigation"> <span class="sr-only">Navigation:</span>
+                <ul>
+                    <li> <a href="#ProjectsandConsultancies" onclick="closeNav('ProjectsandConsultancies')"
+                            class="sidebar-nav-item hover-underline-animation"> Projects and Consultancies </a>
+                    </li>
+                    <li> <a href="#researchPublications" onclick="closeNav('researchPublications')"
+                            class="sidebar-nav-item hover-underline-animation"> Research Publications </a>
+                    </li>
+                    <li> <a href="#thegroup" onclick="closeNav('thegroup')"
+                            class="sidebar-nav-item hover-underline-animation"> The Group </a>
+                    </li>
+                    <li> <a href="#csmIIITD" onclick="closeNav('csmIIITD')"
+                            class="sidebar-nav-item hover-underline-animation"> CSM IIITD
+                        </a> </li>
+                    <li> <a href="#teaching" onclick="closeNav('teaching')"
+                            class="sidebar-nav-item hover-underline-animation">
+                            Teaching </a> </li>
+                    <li> <a href="#contact" onclick="closeNav('contact')"
+                            class="sidebar-nav-item hover-underline-animation"> Contact </a> </li>
+                    <li> <a href="#cv" onclick="closeNav('cv')" class="sidebar-nav-item hover-underline-animation"> CV
+                        </a> </li>
+                </ul>
+            </nav>
+            <div class="sidebar-social "> <span class="sr-only">Social</span>
+                <ul>
+                    <li> <a href="https://scholar.google.co.in/citations?user=x5XsnwkAAAAJ&hl=en" target="_blank"
+                            title="GoogleScholar" class="no-mark-external "> <span class="fa fa-graduation-cap"></span>
+                            <span class="sr-only ">GoogleScholar</span> </a> </li>
+                    <li> <a href="https://twitter.com/pravesh?s=20" target="_blank" title="Twitter"
+                            class="no-mark-external ">
+                            <span class="fa fa-twitter"></span> <span class="sr-only">Twitter</span> </a> </li>
+                    <li> <a href="https://www.linkedin.com/in/QuantE Energy/" target="_blank" title="Linkedin"
+                            class="no-mark-external ">
+                            <span class="fa fa-linkedin-square"></span> <span class="sr-only">Linkedin</span> </a> </li>
+                    <li> <a href="mailto:praveshb@iiitd.ac.in " target="_blank" title="Email" class="no-mark-external ">
+                            <span class="fa fa-envelope"></span> <span class="sr-only">Email</span> </a> </li>
+                </ul>
+            </div> -->
+        </div>
+    </header>
+
+    <hr class="sr-only" hidden />
+
+    <div id="QuantE Energy" class="article">
+        <h2 class="article-title"></h2>
+        <div class="article-content">
+
+            <main id="_main" class="content layout-default" role="main">
+                <nav id="breadcrumbs" class="screen-only">
+                    <ul> </ul>
+                </nav>
+                <article class="page" role="article">
+                    <header>
+                        <h1 class="page-title">
+                            <div class="typing-demo">QuantE Energy</div>
+                        </h1>
+                        <div class="hr pb0"></div>
+                    </header>
+                    
+                    <div class="QuantE_Energy_article">
+                        <h2 class="QuantE_Energy_h2">Problem</h2>
+                        <div class="QuantE_Energy_container">
+                            <div class="QuantE_Energy_box">
+                                <span class="icon">💰</span>
+                                <strong>Budget</strong>
+                                <p>"We have low adoption in Green Technologies due to high upfront investment"</p>
+                                <svg class="L_shape_svg" width="400" height="500">
+                                    <polyline points="200,0 200,200 550,200" stroke="blue" stroke-width="1" fill="none"/>
+                                </svg>
+                            </div>
+                            <div class="QuantE_Energy_box">
+                                <span class="icon">🔧</span>
+                                <strong>Service</strong>
+                                <p>"We don’t know, how, when, and where to receive quality and timely Maintenance service"</p>
+                                <svg class="L_shape_svg" width="150" height="150">
+                                    <line x1="75" y1="0" x2="75" y2="75" stroke="blue" stroke-width="1"/>
+                                </svg>
+                            </div>
+                            <div class="QuantE_Energy_box">
+                                <span class="icon">💬</span>
+                                <strong>Information</strong>
+                                <p>"We don’t know, how will Green Technologies be performing on daily basis?"</p>
+                                <svg class="L_shape_svg" width="400" height="500">
+                                    <polyline points="200,0 200,187 5,187" stroke="blue" stroke-width="1" fill="none"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <br>
+                        <span class="QuantE_Energy_question-mark">?</span>
+                        <div class="QuantE_Energy_building-container">
+                            <div class="QuantE_Energy_building"></div>
+                        </div>
+                        <div class="QuantE_Energy_highlight">Housing Societies often face challenges to implement Greener Solutions for their Energy needs</div>    
+                    </div>
+
+                    <!-- <p>
+                        <div id="introduction" ></div>
+                    </p> -->
+
+                    <hr class="dingbat related" />
+                </article>
+            </main>
+
+        </div>
+    </div>
+
+    <hr class="sr-only" hidden />
+
+    <div id="ProjectsandConsultancies" class="article">
+        <h2 class="article-title"></h2>
+        <div class="article-content">
+
+            <main id="_main" class="content layout-default" role="main">
+                <nav id="breadcrumbs" class="screen-only">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li> <span>/</span> <span>ProjectsandConsultancies</span> </li>
+                    </ul>
+                </nav>
+                <article class="page" role="article">
+                    <header>
+                        <h1 class="page-title">
+                            <div class="typing-demo">Projects and Consultancies</div>
+                        </h1>
+                        <div class="hr pb0"></div>
+                    </header>
+
+                    <h2 class="page-title" style="display: inline-flex; align-items: center;"> <img src="img/project-management (1).png"
+                            style="height: 1.5em; width: 1.5em; margin-right: 0.5em;">Sponsored Research Projects</h2>
+                    <div class="hr pb0"></div>
+
+                    <div id="sponsored-projects"></div>
+
+                    <!-- <div>
+                        <span style="width: 40%; float:left">April 2021 – March 2026</span>
+                        <strong>Centre for Sustainable Mobility</strong>
+                        <a href="#nav" class="expand-link"><i class="fa fa-angle-double-down"
+                                style="font-size:20px"></i></a>
+                        <div class="expandable" id="nav">
+                            <ul style="width: 62%; float:right; list-style-type: none;">
+                                <li>Amount: 61 Million INR</li>
+                                <li>Grant Agency: Delhi Government</li>
+                                <li>Work/Impact:
+                                    • Development of the contactless ticketing solution for the
+                                    Delhi govt for public transit buses. Development of the
+                                    official integrated transport app – One Delhi for the Delhi
+                                    government.
+                                    • Open EV database and protocol. Open data protocol and
+                                    real-time database of all the EV charging stations of Delhi.
+                                    More than 3000 charging stations registered seamlessly and
+                                    data available to consume.
+                                    • Grievance management system of public transit for the Delhi
+                                    government.
+                                    • Development of the Chartr app. Used by 2 Lac people a
+                                    day. Downloads: 1.5 M
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
+
+                    <br>
+
+                    <h2 class="page-title" style="display: inline-flex; align-items: center;"> <img
+                            src="img/project-management (1).png"
+                            style="height: 1.5em; width: 1.5em; margin-right: 0.5em;">Consultancy Projects</h2>
+                    <div class="hr pb0"></div>
+
+                    <div id="consultancy-projects"></div>
+
+                    <hr class="dingbat related" />
+                </article>
+            </main>
+        </div>
+    </div>
+
+    <hr class="sr-only" hidden />
+
+    <div id="researchPublications" class="article">
+        <h2 class="article-title"></h2>
+        <div class="article-content">
+
+            <main id="_main" class="content layout-default" role="main">
+                <nav id="breadcrumbs" class="screen-only">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li> <span>/</span> <span>researchPublications</span> </li>
+                    </ul>
+                </nav>
+                <article class="page" role="article">
+                    <header>
+                        <h1 class="page-title">
+                            <div class="typing-demo">Research Publications</div>
+                        </h1>
+                        <div class="hr pb0"></div>
+                    </header>
+
+                    <h2 class="page-title"> <i class="fa fa-pencil-square-o"></i>Journal Articles</h2>
+                    <div class="hr pb0"></div>
+
+                    <ol>
+                        <div id="journal-articles"></div>
+                    </ol>
+
+                    <h2 class="page-title"> <i class="fa fa-pencil-square-o"></i>Conference Proceedings</h2>
+                    <div class="hr pb0"></div>
+
+                    <ol>
+                        <div id="conference-proceedings"></div>
+                    </ol>
+
+                    <hr class="dingbat related" />
+                </article>
+            </main>
+        </div>
+    </div>
+
+    <hr class="sr-only" hidden />
+
+    <div id="thegroup" class="article">
+        <h2 class="article-title"></h2>
+        <div class="article-content">
+
+            <main id="_main" class="content layout-default" role="main">
+                <nav id="breadcrumbs" class="screen-only">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li> <span>/</span> <span>thegroup</span> </li>
+                    </ul>
+                </nav>
+                <article class="page" role="article">
+                    <header>
+                        <h1 class="page-title">
+                            <div class="typing-demo">The Group <i class="fa fa-group" style="font-size: 25px;"></i> </div>
+                        </h1>
+                        <div class="hr pb0"></div>
+                    </header>
+
+                    <div id="group-members"></div>
+
+                    <hr class="dingbat related" />
+                </article>
+            </main>
+        </div>
+    </div>
+
+    <hr class="sr-only" hidden />
+
+    <div id="csmIIITD" class="article">
+        <h2 class="article-title"></h2>
+        <div class="article-content">
+
+            <main id="_main" class="content layout-default" role="main">
+                <nav id="breadcrumbs" class="screen-only">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li> <span>/</span> <span>csmIIITD</span> </li>
+                    </ul>
+                </nav>
+                <article class="page" role="article">
+                    <header>
+                        <h1 class="page-title">
+                            <div class="typing-demo" >Centre of Excellence on Sustainable Mobility 
+                                <a href="https://csm.iiitd.ac.in/" target="_blank" class="fa fa-external-link" style="font-size: 20px; text-decoration: none;"></a>
+                            </div>
+                        </h1>
+                        <div class="hr pb0"></div>
+                    </header>
+
+                    <iframe src="https://csm.iiitd.ac.in/" width="100%" height="600"></iframe>
+
+                    <hr class="dingbat related" />
+                </article>
+            </main>
+
+
+        </div>
+    </div>
+
+
+    <div id="teaching" class="article">
+        <h2 class="article-title"></h2>
+        <div class="article-content">
+
+            <main id="_main" class="content layout-default" role="main">
+                <nav id="breadcrumbs" class="screen-only">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li> <span>/</span> <span>Courses Taught</span> </li>
+                    </ul>
+                </nav>
+                <article class="page" role="article">
+                    <header>
+                        <h1 class="page-title">
+                            <div class="typing-demo">Courses Taught
+                                <i class='fas fa-chalkboard-teacher' style="font-size: 25px;"></i>
+                            </div>
+                        </h1>
+                        <div class="hr pb0"></div>
+                    </header>
+
+                    <div id="teaching-courses"></div>
+
+                    <hr class="dingbat related" />
+                </article>
+            </main>
+
+
+        </div>
+    </div>
+
+    <hr class="sr-only" hidden />
+
+    <div id="contact" class="article">
+        <h2 class="article-title"></h2>
+        <div class="article-content">
+
+            <main id="_main" class="content layout-default" role="main">
+                <nav id="breadcrumbs" class="screen-only">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li> <span>/</span> <span>contact</span> </li>
+                    </ul>
+                </nav>
+                <article class="page" role="article">
+                    <header>
+                        <h1 class="page-title">
+                            <div class="typing-demo">Contact</div>
+                        </h1>
+                        <div class="hr pb0"></div>
+                    </header>
+
+                    <div class="float-container" style="width: 100%;">
+
+                        <div class="contactList" style="float: left; width: 45%;">
+
+                            <ul style="list-style-type: none;">
+                                <li>
+                                    <i class="fa fa-phone"></i> (+91) 011-26907-449
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope"></i> praveshb@iiitd.ac.in
+                                </li>
+                                <li>
+                                    <i class="fa fa-map-marker"></i>
+                                    A-604, R&D Building, IIIT-D Okhla Phase III <br>
+                                    (Near Govind Puri Metro Station)
+                                    New Delhi,<br>
+                                    India - 110020
+                                </li>
+                            </ul>
+
+                            <hr class="dingbat related" />
+
+                            <footer>
+                                <div class="typing-demo">  
+                                    <p style="display: inline;">Developed by Mahesh Kumar</p>
+                                    <a href="https://www.linkedin.com/in/mahesh-kumar-70389819b/" target="_blank" class="fa fa-external-link" style="font-size: 15px; text-decoration: none;"></a>
+                                </div>
+                            </footer>
+                        </div>
+
+
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1752.4313775803319!2d77.26925080971392!3d28.54384467801649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3bba6c38b6f%3A0x644fd98dcb70fb93!2sCentre%20for%20Sustainability%20Mobility%20(CSM)!5e0!3m2!1sen!2sin!4v1685095073621!5m2!1sen!2sin"
+                            width="50%" height="500" style="border:0; float: right;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                        
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+
+    <hr class="sr-only" hidden />
+
+    <div id="cv" class="article">
+        <h2 class="article-title"></h2>
+        <div class="article-content">
+
+            <main id="_main" class="content layout-default" role="main">
+                <nav id="breadcrumbs" class="screen-only">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li> <span>/</span> <span>CurriculumVitae</span> </li>
+                    </ul>
+                </nav>
+                <article class="page" role="article">
+                    <header>
+                        <h1 class="page-title">
+                            <div class="typing-demo">Curriculum Vitae</div>
+                        </h1>
+                        <div class="hr pb0"></div>
+                    </header>
+
+                    <div id="CurriculumVitae"></div>
+
+                    <hr class="dingbat related" />
+                </article>
+
+            </main>
+
+        </div>
+    </div>
+
+    <hr class="sr-only" hidden />
+
+    <script>
+        fetch('https://script.google.com/macros/s/AKfycby_hXEWhrNvTyI_W5yTVD9YbXf-X-e1hjGdPOnRZzqNnKT1M1C34xRsSGDn1ANy2dtg2w/exec')
+            .then(res => res.json())
+            .then(data => {
+                const jsonData = JSON.stringify(data);
+
+                const group_container = document.getElementById('group-members');
+                const teaching_container = document.getElementById('teaching-courses');
+                const journalarticles_container = document.getElementById('journal-articles');
+                const conferenceproceedings_container = document.getElementById('conference-proceedings');
+                const sponsoredprojects_container = document.getElementById('sponsored-projects');
+                const consultancyprojects_container = document.getElementById('consultancy-projects');
+                const introduction_container = document.getElementById('introduction');
+                const curriculumvitae_container = document.getElementById('CurriculumVitae');
+
+                // Create a template for a single sponsored project
+                function createconsultancyProjectsTemplate(project) {
+                    let listItems = '';
+
+                    if (project.Amount) {
+                        listItems += `<li> <i>Amount:</i> ${project.Amount}</li>`;
+                    }
+                    if (project.Grant_Agency) {
+                        listItems += `<li> <i>Grant Agency:</i> ${project.Grant_Agency}</li>`;
+                    }
+                    if (project.Work) {
+                        // listItems += `<li> <i>Work/Impact:</i> ${project.Work}</li>`;
+                        const workItems = project.Work.split('•');
+                        listItems += `<i>Work/Impact:</i> <br>`;
+                        listItems += workItems
+                            .map((item) => item.trim())
+                            .filter((item) => item)
+                            .map((item) => `<li>• ${item}</li>`)
+                            .join('');
+
+                    }
+                    if (project.My_Status) {
+                        listItems += `<li> <i>My Status:</i> ${project.My_Status}</li>`;
+                    }
+                    if (project.Other_Collaborators) {
+                        listItems += `<li> <i>Other Collaborators:</i> ${project.Other_Collaborators}</li>`;
+                    }
+
+                    return `
+                            <div>
+                                <span style="width: 40%; float:left">${project.Date}</span>
+                                <br>
+                                <a href="#" class="expand-link"><i class="fa fa-angle-double-down"
+                                            style="font-size:20px"></i></a>
+                                <div style="width: 60%; float:right;">
+                                    <strong>${project.Title}</strong>
+                                    
+                                    <div class="expandable">
+                                        <ul style="width: 100%;list-style-type: none;">
+                                            ${listItems}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        `;
+                }
+
+
+
+
+                // Create a template for a single sponsored project
+                function createSponsoredProjectTemplate(project) {
+                    let listItems = '';
+
+                    if (project.Amount) {
+                        listItems += `<li> <i>Amount:</i> ${project.Amount}</li>`;
+                    }
+                    if (project.Grant_Agency) {
+                        listItems += `<li> <i>Grant Agency:</i> ${project.Grant_Agency}</li>`;
+                    }
+                    if (project.Work) {
+                        // listItems += `<li> <i>Work/Impact:</i> ${project.Work}</li>`;
+                        const workItems = project.Work.split('•');
+                        listItems += `<i>Work/Impact:</i> <br>`;
+                        listItems += workItems
+                            .map((item) => item.trim())
+                            .filter((item) => item)
+                            .map((item) => `<li>• ${item}</li>`)
+                            .join('');
+
+                    }
+                    if (project.My_Status) {
+                        listItems += `<li> <i>My Status:</i> ${project.My_Status}</li>`;
+                    }
+                    if (project.Other_Collaborators) {
+                        listItems += `<li> <i>Other Collaborators:</i> ${project.Other_Collaborators}</li>`;
+                    }
+
+                    return `
+                            <div>
+                                <span style="width: 40%; float:left">${project.Date}</span>
+                                <br>
+                                <a href="#" class="expand-link"><i class="fa fa-angle-double-down"
+                                            style="font-size:20px"></i></a>
+                                <div style="width: 60%; float:right;">
+                                    <strong>${project.Title}</strong>
+                                    
+                                    <div class="expandable">
+                                        <ul style="width: 100%;list-style-type: none;">
+                                            ${listItems}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        `;
+                }
+
+                // Create a template for a single Journal Article
+                function createJournalArticlesTemplate(article) {
+                    return `
+                        <li>
+                            ${article.Journal_Author}
+                            <i>${article.Journal_Topic}</i>
+                            <a style="font-family:sans-serif;" href="${article.Journal_Link}"
+                                target="_blank">${article.Journal_LinkName}<i class="fa fa-link"></i></a>
+                        </li>
+                    `;
+                }
+
+                // Create a template for a single Conference Proceedings
+                function createConferenceProceedingsTemplate(article) {
+                    return `
+                        <li>
+                            ${article.Conference_Author}
+                            <i>${article.Conference_Topic}</i>
+                            <a style="font-family:sans-serif;" href="${article.Conference_Link}"
+                                target="_blank">${article.Conference_LinkName}<i class="fa fa-link"></i></a>
+                        </li>
+                    `;
+                }
+
+                // Create a template for a single Group member
+                function createGroupMemberTemplate(member, index) {
+                    const floatStyle = index % 2 === 0 ? 'left' : 'right'; // Alternate float style
+                    return `
+                    <p><img style="float: ${floatStyle}; padding: 15px; border-radius: 50%;" src="${member.Member_Image}"
+                    width="35%" />
+                        <br /><a style="font-family:sans-serif; font-weight:bold; color:blue; text-decoration: none;"
+                            href="${member.Member_Link}" target="_blank" >${member.Member_Name}</a>,
+                            <br /> ${member.Member_Profession} <br />${member.Member_Content}
+                        <br /> <br /> <br /> <br /> <br />
+                    </p>
+                    `;
+                }
+
+                // Create a template for a single Teaching Course
+                function createTeachingCourseTemplate(course) {
+                    return `
+                    <div class="course-info">
+                        <img class="course-image" src="${course.Course_Image}" />
+                        <div class="course-details">
+                            <strong>${course.Course_Name}</strong><br />
+                            ${course.Course_Content}
+                        </div>
+                    </div>
+                    <br>
+                    `;
+                }
+
+                // Create a template for a Introduction
+                function createIntroductionTemplate(intro) {
+                    return `
+                        ${intro.Introduction}                    
+                    `;
+                }
+
+                // Create a template for a CurriculumVitae
+                function createCurriculumVitaeTemplate(CV) {
+                    return `
+                        <iframe src="${CV.CV_Link}" width="100%" height="500" allow="autoplay" style="border:none;"></iframe>                  
+                    `;
+                }
+
+                // Generate HTML for the consultancies projects
+                let consultancyProjectsHTML = '';
+                const consultancyProjects = data.data.consultancyProjects;
+                consultancyProjects.forEach((project) => {
+                    consultancyProjectsHTML += createconsultancyProjectsTemplate(project);
+                });
+
+                // Generate HTML for the sponsored projects
+                let SponsoredprojectsHTML = '';
+                const sponsoredProjects = data.data.sponsoredProjects;
+                sponsoredProjects.forEach((project) => {
+                    SponsoredprojectsHTML += createSponsoredProjectTemplate(project);
+                });
+
+
+                // Generate HTML for all the Conference Proceedings except the first dictionary
+                let conferenceProceedingsHTML = '';
+                const conferenceProceedingsvar = data.data.conferenceProceedings; // Exclude the first dictionary
+                conferenceProceedingsvar.forEach((article) => {
+                    conferenceProceedingsHTML += createConferenceProceedingsTemplate(article);
+                });
+
+                // Generate HTML for all the Journal Articles except the first dictionary
+                let journalArticlesHTML = '';
+                const journalArticlesvar = data.data.journalArticles; // Exclude the first dictionary
+                journalArticlesvar.forEach((article) => {
+                    journalArticlesHTML += createJournalArticlesTemplate(article);
+                });
+
+                // Generate HTML for all the group members except the first dictionary
+                let groupMembersHTML = '';
+                const groupMembers = data.data.thegroup; // Exclude the first dictionary
+                groupMembers.forEach((member, index) => {
+                    groupMembersHTML += createGroupMemberTemplate(member, index);
+                });
+
+                // Generate HTML for the teaching courses
+                let teachingCoursesHTML = '';
+                const teachingCourses = data.data.teaching; // Exclude the first dictionary
+                teachingCourses.forEach((course) => {
+                    teachingCoursesHTML += createTeachingCourseTemplate(course);
+                });
+
+                // Generate HTML for the Introduction
+                let introductionsHTML = '';
+                const introduction = data.data.introduction; // Exclude the first dictionary
+                    introduction.forEach((intro) => {
+                        introductionsHTML += createIntroductionTemplate(intro);
+                });
+                
+                // Generate HTML for the Introduction
+                let curriculumvitaeHTML = '';
+                const curriculumvitae = data.data.curriculumvitae; // Exclude the first dictionary
+                    curriculumvitae.forEach((cv) => {
+                        curriculumvitaeHTML += createCurriculumVitaeTemplate(cv);
+                });
+                // Insert the generated HTML into the container element
+                group_container.innerHTML = groupMembersHTML;
+                teaching_container.innerHTML = teachingCoursesHTML;
+                journalarticles_container.innerHTML = journalArticlesHTML;
+                conferenceproceedings_container.innerHTML = conferenceProceedingsHTML;
+                sponsoredprojects_container.innerHTML = SponsoredprojectsHTML;
+                consultancyprojects_container.innerHTML = consultancyProjectsHTML;
+                introduction_container.innerHTML = introductionsHTML;
+                curriculumvitae_container.innerHTML = curriculumvitaeHTML;
+
+                // Add event listeners to expand/collapse the content
+                const expandLinks = sponsoredprojects_container.querySelectorAll('.expand-link');
+                expandLinks.forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const expandable = link.parentNode.querySelector('.expandable');
+                        expandable.classList.toggle('expand');
+                    });
+                });
+
+                // Add event listeners to expand/collapse the content
+                const expand = consultancyprojects_container.querySelectorAll('.expand-link');
+                expand.forEach((link) => {
+                    link.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const expandable = link.parentNode.querySelector('.expandable');
+                        expandable.classList.toggle('expand');
+                    });
+                });
+
+            })
+    </script>
+
+    <script>
+
+        function openNav() {
+            document.getElementById("_sidebar").style.width = "100%";
+        }
+
+        function closeNav(id) {
+            var articles = document.getElementsByClassName('article');
+            for (var i = 0; i < articles.length; i++) {
+                var article = articles[i];
+                var content = article.getElementsByClassName('article-content')[0];
+                if (article.id === id) {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            }
+            var windowWidth = window.innerWidth;
+            var sidebar = document.getElementById("_sidebar");
+            if (windowWidth < 1024) {
+                var calculatedWidth = windowWidth * 0.01; // Calculate the percentage width dynamically based on window width
+                sidebar.style.width = calculatedWidth + "px";
+            } else {
+                sidebar.style.width = "22%"; // Reset to 22% when screen width is larger than 1024px
+            }
+            window.scrollTo(0, 0);
+            // document.getElementById("_sidebar").style.width = "22%";
+        }
+
+    </script>
+</body>
+
+</html>
