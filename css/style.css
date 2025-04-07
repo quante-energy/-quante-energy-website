@@ -327,6 +327,146 @@ h1, h2, h3, h4 {
   border-radius: 10px;
 }
 
+
+.solution-building {
+  text-align: center;
+}
+
+.building-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.building-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
+
+.solution-footer {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.solution-footer h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.solution-footer p {
+  color: #666;
+}
+
+.circle-container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 2px dotted #ccc;
+}
+
+.circular-card {
+  position: absolute;
+  width: 220px;
+  transform: translate(-50%, -50%);
+}
+
+.card1 { top: 0%; left: 50%; }
+.card2 { top: 50%; left: 100%; }
+.card3 { top: 100%; left: 50%; }
+.card4 { top: 50%; left: 0%; }
+
+.circular-benefit-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: left;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.circular-benefit-content {
+  flex: 1;
+}
+
+.circular-benefit-content h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.circular-benefit-content p {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.circular-benefit-icon {
+  width: 60px;
+  height: 60px;
+  background: #e9f6f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.circular-benefit-icon i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.purple { background-color: #8e44ad; }
+.orange { background-color: #e67e22; }
+.blue { background-color: #3498db; }
+.green { background-color: #27ae60; }
+
+
+
+@media (max-width: 480px) {
+  .circle-container {
+    width: 260px;
+    height: 320px;
+  }
+
+  .circular-card {
+    width: 80px;
+  }
+
+  .circular-benefit-card {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  .circular-benefit-content h3 {
+    font-size: 0.9rem;
+  }
+
+  .circular-benefit-content p {
+    font-size: 0.7rem;
+  }
+
+  .circular-benefit-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .circular-benefit-icon i {
+    font-size: 1.2rem;
+  }
+}
+
+
 /* Benefits Section */
 .benefits-grid {
   display: grid;
