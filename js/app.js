@@ -95,6 +95,17 @@ const animateOnScroll = () => {
     stagger: 0.2
   });
 
+  gsap.from('.process-step3', {
+    scrollTrigger: {
+      trigger: '.process-timeline3',
+      start: 'top center+=100',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.2
+  });
+
   // About stats animation
   gsap.from('.about-stats .stat', {
     scrollTrigger: {
