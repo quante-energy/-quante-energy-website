@@ -311,37 +311,36 @@ h1, h2, h3, h4 {
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .solution-header {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .solution-header i {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--primary-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .solution-header h3 {
   color: var(--primary-color);
   font-size: 1.5rem;
-  margin: 0.5rem 0;
 }
 
 .solution-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #2c3e50;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #f0f0f0;
 }
 
 .solution-details p {
-  font-style: italic;
-  color: #666;
   margin-bottom: 1.5rem;
+  font-style: italic;
 }
 
 .solution-features {
@@ -351,98 +350,139 @@ h1, h2, h3, h4 {
 .feature {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .feature i {
   color: var(--primary-color);
-  font-size: 1.2rem;
-  width: 24px;
+  font-size: 1rem;
 }
 
-.feature span {
-  color: #666;
-  font-size: 0.95rem;
-}
-
-/* Building Image Section */
+/* Building Section */
 .solution-building {
-  margin-top: 4rem;
-  text-align: center;
+  margin-top: 6rem; /* Increased margin to accommodate longer lines */
+  position: relative;
+}
+
+.building-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* Increased max-width for better spacing */
+  margin: 0 auto;
+  padding-top: 2rem;
 }
 
 .building-container {
   position: relative;
-  max-width: 600px;
+  width: 300px;
   margin: 0 auto;
-  padding: 2rem 0;
+  text-align: center;
 }
 
 .building-image {
   width: 100%;
   height: auto;
-  max-width: 400px;
+  display: block;
 }
 
-.building-label {
+/* Building Text */
+.building-text {
   position: absolute;
-  background: var(--primary-color);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  z-index: 2;
 }
 
-.building-label.left {
+.building-text.left {
+  left: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.building-text.right {
+  right: -220px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Connector Lines */
+.connector-lines {
+  position: absolute;
+  top: -150px; /* Move it up to reach the cards */
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 100%;
+  height: calc(100% + 150px); /* Increase height to accommodate the upward extension */
+  pointer-events: none;
 }
 
-.building-label.right {
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.connector {
+  position: absolute;
+  border-left: 2px dashed var(--primary-color);
+  height: 200px; /* Increased height for longer lines */
+  opacity: 0.6;
 }
 
-.solution-footer {
-  margin-top: 2rem;
-  padding: 2rem;
-  background: #f8f9fa;
-  border-radius: 10px;
+.connector.left {
+  left: 15%;
+  transform: rotate(-45deg);
+  transform-origin: bottom;
 }
 
-.solution-footer h3 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
+.connector.center {
+  left: 50%;
+  height: 180px;
+  transform: translateX(-50%);
 }
 
-.solution-footer p {
-  color: #666;
+.connector.right {
+  right: 15%;
+  transform: rotate(45deg);
+  transform-origin: bottom;
 }
 
-/* Responsive adjustments */
+/* Blinking Animation */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+.blink {
+  animation: blink 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .solution-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .solution-grid {
     grid-template-columns: 1fr;
   }
 
-  .building-container {
-    padding: 2rem;
-  }
-
-  .building-label {
-    position: static;
+  .building-text {
+    position: relative;
+    left: auto !important;
+    right: auto !important;
     transform: none;
     margin: 1rem auto;
-    display: inline-block;
+    text-align: center;
+    max-width: 200px;
   }
-}
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .solution-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .connector {
+    display: none;
+  }
+
+  .building-container {
+    width: 200px;
   }
 }
 
