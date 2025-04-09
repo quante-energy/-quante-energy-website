@@ -414,22 +414,6 @@ h1, h2, h3, h4 {
   max-width: 200px;
 }
 
-.solution-footer {
-  margin-top: 2rem;
-  padding: 2rem;
-  background: #f8f9fa;
-  border-radius: 10px;
-}
-
-.solution-footer h3 {
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.solution-footer p {
-  color: #666;
-}
-
 .corner-container {
   position: relative;
   height: 600px;
@@ -671,6 +655,49 @@ h1, h2, h3, h4 {
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.split-arrow-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.arrow-segment {
+  position: relative;
+  background-color: var(--secondary-color);
+  height: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 5px;
+}
+
+.segment-1 {
+  width: 60%;
+}
+
+.segment-2 {
+  width: 40%;
+}
+
+.arrow-icon {
+  color: var(--secondary-color);
+  font-size: 40px;
+}
+
+.arrow-text {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  background: #fff;
+  padding: 0 6px;
+  color: var(--primary-color);
 }
 
 /* PPA Section */
@@ -988,6 +1015,10 @@ footer {
   transform: translateY(0);
 }
 
+.step-duration {
+  display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .solution-wrapper,
@@ -1014,6 +1045,14 @@ footer {
   
   .key-takeaways {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split-arrow-wrapper {
+    display: none;
+  }
+  
+  .step-duration {
+    display: block;
   }
 }
 
