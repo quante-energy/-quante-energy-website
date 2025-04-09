@@ -396,24 +396,6 @@ h1, h2, h3, h4 {
   border-radius: 10px;
 }
 
-
-.solution-building {
-  text-align: center;
-}
-
-.building-container {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.building-image {
-  width: 100%;
-  height: auto;
-  max-width: 200px;
-}
-
 .corner-container {
   position: relative;
   height: 600px;
@@ -646,6 +628,42 @@ h1, h2, h3, h4 {
   font-size: 1rem;
   color: var(--text-color);
 }
+
+
+.solution-Animation {
+  text-align: center;
+}
+
+.Animation-container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.Animation-image {
+  width: 100%;
+  height: auto;
+}
+
+
+.solution-building {
+  text-align: center;
+}
+
+.building-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.building-image {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
+
 
 .step-duration {
   font-size: 1rem;
