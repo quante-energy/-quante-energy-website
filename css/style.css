@@ -344,11 +344,169 @@ h1, h2, h3, h4 {
 }
 
 .problem-card {
+  position: relative;
   background: white;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: var(--transition);
+}
+
+@media screen and (min-width: 1105px) {
+  .problem-card:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    bottom: -350px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 350px;
+    z-index: -1; /* Push it behind the card, optional */
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--secondary-color),
+      var(--secondary-color) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    animation: scrollDots 400ms linear infinite;
+  }
+  
+  @keyframes scrollDots {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 10px;
+    }
+  }
+  
+  
+  .problem-card:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    bottom: -350px; /* Align with bottom of vertical line */
+    right: 50%;
+    transform: translateX(2px); /* Start at right side of vertical line */
+    width: 400px;
+    height: 4px;
+    z-index: -1;
+    background: repeating-linear-gradient(
+      to left,
+      var(--secondary-color),
+      var(--secondary-color) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    animation: scrollDotsHorizontal 400ms linear infinite;
+  }
+  
+  @keyframes scrollDotsHorizontal {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 10px 0;
+    }
+  }
+  
+  
+  .problem-card:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    bottom: -350px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 350px;
+    z-index: -1; /* Push it behind the card, optional */
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--secondary-color),
+      var(--secondary-color) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    animation: scrollDots 400ms linear infinite;
+  }
+  
+  @keyframes scrollDots {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 10px;
+    }
+  }
+  
+  
+  .problem-card:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    bottom: -350px; /* Align with bottom of vertical line */
+    left: 50%;
+    transform: translateX(2px); /* Start at right side of vertical line */
+    width: 400px;
+    height: 4px;
+    z-index: -1;
+    background: repeating-linear-gradient(
+      to right,
+      var(--secondary-color),
+      var(--secondary-color) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    animation: scrollDotsHorizontal 400ms linear infinite;
+  }
+  
+  @keyframes scrollDotsHorizontal {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 10px 0;
+    }
+  }
+  
+  
+  .problem-card:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100px;
+    z-index: -1; /* Push it behind the card, optional */
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--secondary-color),
+      var(--secondary-color) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    animation: scrollDots 400ms linear infinite;
+  }
+  
+  @keyframes scrollDots {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 10px;
+    }
+  }  
+
+  .building-container{
+    display: block;
+  }
+  
+}
+
+@media screen and (max-width: 1105px) {
+  .building-container{
+    display: none;
+  }
 }
 
 .problem-card:hover {
@@ -363,6 +521,12 @@ h1, h2, h3, h4 {
 
 .problem-card h3 {
   font-size: 1.5rem;
+}
+
+.question-mark {
+  padding-top: 80px;
+  font-size: 100px;
+  color: red;
 }
 
 
@@ -646,16 +810,11 @@ h1, h2, h3, h4 {
   height: auto;
 }
 
-
-.solution-building {
-  text-align: center;
-}
-
 .building-container {
+  text-align: center;
   position: relative;
   max-width: 600px;
   margin: 0 auto;
-  padding: 0;
 }
 
 .building-image {
