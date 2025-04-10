@@ -33,6 +33,20 @@ h1, h2, h3, h4 {
   margin-bottom: 1rem;
 }
 
+.QuantE_Energy_highlight {
+  background-color: #c2f0c2;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: 'Courier New', monospace;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+}
+
 .section-title {
   font-size: 2.5rem;
   text-align: center;
@@ -503,8 +517,222 @@ h1, h2, h3, h4 {
   
 }
 
+
+
+@media screen and (min-width: 1105px) {
+  .process-step3:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    bottom: -350px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 350px;
+    z-index: -1; /* Push it behind the card, optional */
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--secondary-color),
+      var(--secondary-color) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    animation: scrollDots 400ms linear infinite;
+  }
+  
+  @keyframes scrollDots {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 10px;
+    }
+  }
+  
+  
+  .process-step3:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    bottom: -350px; /* Align with bottom of vertical line */
+    right: 50%;
+    transform: translateX(2px); /* Start at right side of vertical line */
+    width: 400px;
+    height: 4px;
+    z-index: -1;
+    background: repeating-linear-gradient(
+      to left,
+      var(--secondary-color),
+      var(--secondary-color) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    animation: scrollDotsHorizontal 400ms linear infinite;
+  }
+  
+  @keyframes scrollDotsHorizontal {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 10px 0;
+    }
+  }
+  
+  /* === Add icon at end of horizontal line === */
+  .process-step3 .fa-arrow-right {
+    position: absolute;
+    bottom: -382px; /* Adjust slightly above or below line if needed */
+    right: calc(50% - 311px); /* Close to the left end of the line */
+    font-size: 70px;
+    color: var(--secondary-color);
+    z-index: 1;
+  }
+
+  .sustainability-label {
+    position: absolute;
+    bottom: -412px; /* Slightly above the horizontal line at -350px */
+    right: -10%;
+    transform: translateX(2px) translateY(-100%);
+    color: var(--primary-color);
+    font-weight: bold;
+    background: white; /* optional: to make it stand out */
+    padding: 2px 6px;
+    font-size: 25px;
+    z-index: 1;
+  }
+
+
+  .Digitization-label {
+    position: absolute;
+    bottom: -530px; /* Slightly above the horizontal line at -350px */
+    right: 70%;
+    transform: translateX(2px) translateY(-100%);
+    color: var(--primary-color);
+    font-weight: bold;
+    background: white; /* optional: to make it stand out */
+    padding: 2px 6px;
+    font-size: 25px;
+    z-index: 1;
+  }
+  
+
+  .process-step3 .fa-arrow-left {
+    position: absolute;
+    bottom: -382px; /* Adjust slightly above or below line if needed */
+    right: calc(116%); /* Close to the left end of the line */
+    font-size: 70px;
+    color: var(--secondary-color);
+    z-index: 1;
+  }
+  
+  
+  .process-step3:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    bottom: -350px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 350px;
+    z-index: -1; /* Push it behind the card, optional */
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--secondary-color),
+      var(--secondary-color) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    animation: scrollDots 400ms linear infinite;
+  }
+  
+  @keyframes scrollDots {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 10px;
+    }
+  }
+  
+  .process-step3:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    bottom: -350px; /* Align with bottom of vertical line */
+    left: 50%;
+    transform: translateX(2px); /* Start at right side of vertical line */
+    width: 400px;
+    height: 4px;
+    z-index: -1;
+    background: repeating-linear-gradient(
+      to right,
+      var(--secondary-color),
+      var(--secondary-color) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    animation: scrollDotsHorizontal 400ms linear infinite;
+  }
+  
+  @keyframes scrollDotsHorizontal {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 10px 0;
+    }
+  }
+  
+  
+  .process-step3:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 150px;
+    z-index: -1; /* Push it behind the card, optional */
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--secondary-color),
+      var(--secondary-color) 5px,
+      transparent 5px,
+      transparent 10px
+    );
+    animation: scrollDots 400ms linear infinite;
+  }
+  
+  @keyframes scrollDots {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 0 10px;
+    }
+  }  
+
+  .building-container{
+    display: block;
+  }
+  
+}
+
+
 @media screen and (max-width: 1105px) {
   .building-container{
+    display: none;
+  }
+
+  .sustainability-label{
+    display: none;
+  }
+
+  .Digitization-label{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .process-step3 .line-arrow {
     display: none;
   }
 }
