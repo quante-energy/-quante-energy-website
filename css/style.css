@@ -412,15 +412,15 @@ h1, h2, h3, h4 {
       transparent 5px,
       transparent 10px
     );
-    animation: scrollDotsHorizontal 400ms linear infinite;
+    animation: scrollDotsHorizontal1 400ms linear infinite;
   }
   
-  @keyframes scrollDotsHorizontal {
+  @keyframes scrollDotsHorizontal1 {
     0% {
-      background-position: 0 0;
+      background-position: 10px 0;
     }
     100% {
-      background-position: 10px 0;
+      background-position: 0 0;
     }
   }
   
@@ -565,15 +565,15 @@ h1, h2, h3, h4 {
       transparent 5px,
       transparent 10px
     );
-    animation: scrollDotsHorizontal 400ms linear infinite;
+    animation: scrollDotsHorizontal2 400ms linear infinite;
   }
   
-  @keyframes scrollDotsHorizontal {
+  @keyframes scrollDotsHorizontal2 {
     0% {
-      background-position: 0 0;
+      background-position: 10px 0;
     }
     100% {
-      background-position: 10px 0;
+      background-position: 0 0;
     }
   }
   
