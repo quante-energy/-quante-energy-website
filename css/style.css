@@ -1159,7 +1159,7 @@ h1, h2, h3, h4 {
 /* Team Section */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
   margin-top: 3rem;
 }
@@ -1185,9 +1185,22 @@ h1, h2, h3, h4 {
   object-fit: cover;
 }
 
-.member-info {
-  flex: 1;
+.name-and-linkedin {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* spacing between name and icon */
 }
+
+.name-and-linkedin h3 {
+  margin: 0;
+}
+
+.name-and-linkedin a {
+  font-size: 1.5rem;
+  color: #0077b5; /* LinkedIn blue */
+  text-decoration: none;
+}
+
 
 .credentials {
   list-style: none;
@@ -1203,6 +1216,8 @@ h1, h2, h3, h4 {
 .experience {
   font-style: italic;
   color: #444;
+  font-weight: bold;
+  font-size: 1.2rem;
   margin-top: 1rem;
 }
 
