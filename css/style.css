@@ -98,7 +98,7 @@ h1, h2, h3, h4 {
 }
 
 .logo img {
-  height: 50px; /* Adjust size as needed */
+  height: 70px; /* Adjust size as needed */
   margin-right: 10px; /* Adjust space between h1 and logo */
 }
 
@@ -111,7 +111,8 @@ h1, h2, h3, h4 {
 .nav-links a {
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
+  font-size: larger;
   transition: var(--transition);
 }
 
@@ -142,6 +143,7 @@ h1, h2, h3, h4 {
 
 /* Hero Section */
 .hero {
+  margin-top: 102px; /* Adjust for fixed navbar */
   position: relative;
   height: 100vh;
   min-height: 600px;
@@ -211,7 +213,7 @@ h1, h2, h3, h4 {
 
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   margin-top: 3rem;
   animation: fadeInUp 1s ease 0.6s;
@@ -1381,7 +1383,7 @@ footer {
 }
 
 .footer-logo {
-  height: 55px;
+  height: 80px;
   margin-bottom: 1rem;
 }
 
