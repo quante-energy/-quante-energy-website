@@ -1,3 +1,49 @@
+/* Floating address label box */
+.label-box {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 500;
+  font-family: sans-serif;
+  width: 350px;
+}
+.label-box h2 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #F07D00;
+}
+.label-box p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.directions-button {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  /* padding: 10px; */
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 500;
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px; */
+}
+.directions-button img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+
+
 /* Modern CSS with animations and responsive design */
 
 :root {
@@ -77,7 +123,7 @@ h1, h2, h3, h4 {
   right: 0;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 5000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -341,6 +387,10 @@ h1, h2, h3, h4 {
 
   .hero-stats3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .label-box{
+    width: 300px;
   }
 }
 

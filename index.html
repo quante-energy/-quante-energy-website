@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="icon" href="img/Final-Quante-new.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
   <nav class="navbar">
@@ -551,7 +552,7 @@
             </div>
             <div>
               <i class="fas fa-map-marker-alt"></i>
-              <p>QuantE Energy Tech Private Limited, 615, Tower A, 6th Floor, Spectrum Mall, Sector 75, Noida</p>
+              <p>QuantE Energy Tech Private Limited, 615, Tower A, 6th Floor, Spectrum Mall, Sector 75, Noida, Uttar Pradesh 201301</p>
             </div>
           </div>
         </div>
@@ -574,8 +575,21 @@
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form> -->
 
-        <div class="map-container">
-          <iframe
+        <div class="map-container" id="map">
+          <div class="label-box">
+            <h2>QuantE Energy Tech Private Limited</h2>
+            <p>615, Tower A, 6th Floor, Spectrum Mall<br>Sector 75, Noida, Uttar Pradesh 201301</p>
+          </div>
+          <!-- Inside your map div -->
+          <a
+          class="directions-button"
+          href="https://www.google.com/maps/dir/?api=1&destination=28.57289783572693,77.37975023691018"
+          target="_blank"
+          >
+          <img src="img/logo.png" alt="Directions Icon" />
+          </a>
+
+          <!-- <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7007.608816054343!2d77.37535799330237!3d28.57563550278313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef9c8ab18a4f%3A0xd4e1f2bee2052460!2sSpectrum%20Metro%20Mall!5e0!3m2!1sen!2sin!4v1744358340407!5m2!1sen!2sin"
             width="100%" 
             height="100%" 
@@ -583,7 +597,8 @@
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          </iframe> -->
+
         </div>
       </div>
     </div>
@@ -626,7 +641,7 @@
             </div>
             <div>
               <i class="fas fa-map-marker-alt"></i>
-              <p>QuantE Energy Tech Private Limited, 615, Tower A, 6th Floor, Spectrum Mall, Sector 75, Noida</p>
+              <p>QuantE Energy Tech Private Limited, 615, Tower A, 6th Floor, Spectrum Mall, Sector 75, Noida, Uttar Pradesh 201301</p>
             </div>
           </div>
         </div>
@@ -636,6 +651,35 @@
       </div>
     </div>
   </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var lat = 28.57289783572693;
+    var lon = 77.37975023691018;
+
+    // Set map and move zoom control to bottom right
+    var map = L.map('map', {
+      zoomControl: false  // disable default control first
+    }).setView([lat, lon], 16);
+
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Red marker icon
+    var redIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+      shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+    // Add marker
+    L.marker([lat, lon], {icon: redIcon}).addTo(map)
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
