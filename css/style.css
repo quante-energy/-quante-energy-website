@@ -1409,14 +1409,25 @@ h1, h2, h3, h4 {
 
 .contact-details div {
   display: flex;
-  align-items: center;
-  gap: 1rem;
   margin-bottom: 1rem;
+  position: relative;
+  padding-left: 30px;
+  min-height: 24px;
 }
 
-.contact-details a {
+.contact-details i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.contact-details a, 
+.contact-details span {
   color: white;
   text-decoration: none;
+  margin: 0;
+  display: inline-block;
 }
 
 .contact-form {
