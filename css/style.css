@@ -1305,7 +1305,7 @@ h1, h2, h3, h4 {
 
 /* CTA Section */
 .cta {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #2ecc71 100%);
+  background: linear-gradient(135deg, #27313f 0%, #27313f 100%);
   color: white;
   text-align: center;
   padding: 4rem 0;
