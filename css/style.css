@@ -1397,7 +1397,7 @@ h1, h2, h3, h4 {
 }
 
 .contact-info {
-  background: var(--primary-color);
+  background: #27313f;
   color: white;
   padding: 2rem;
   border-radius: 10px;
