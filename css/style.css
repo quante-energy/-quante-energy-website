@@ -51,7 +51,7 @@
   --secondary-color: #00c853;
   --text-color: #000000;
   --light-bg: #f0f9f4;
-  --dark-bg: #005e2d;
+  --dark-bg: #27313f;
   --transition: all 0.3s ease;
 }
 
@@ -96,7 +96,7 @@ h1, h2, h3, h4 {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--primary-color);
+  color: #27313f;
 }
 
 /* Layout */
