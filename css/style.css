@@ -257,7 +257,7 @@ h1, h2, h3, h4 {
 
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
   margin-top: 3rem;
   animation: fadeInUp 1s ease 0.6s;
@@ -1298,14 +1298,14 @@ h1, h2, h3, h4 {
 
 .experience {
   color: #444;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.2rem;
   margin-top: 1rem;
 }
 
 /* CTA Section */
 .cta {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #2ecc71 100%);
+  background: linear-gradient(135deg, #27313f 0%, #27313f 100%);
   color: white;
   text-align: center;
   padding: 4rem 0;
@@ -1397,7 +1397,7 @@ h1, h2, h3, h4 {
 }
 
 .contact-info {
-  background: var(--primary-color);
+  background: #27313f;
   color: white;
   padding: 2rem;
   border-radius: 10px;
