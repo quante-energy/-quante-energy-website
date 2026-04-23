@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="QuantE Energy provides innovative solar solutions for housing societies with zero upfront cost. Save up to 50% on electricity bills with our PPA model." />
+    <title>QuantE Energy</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="icon" href="img/Final-Quante-new.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="img/Final-Quante-new.png" alt="QuantE Energy Logo" />
+            <!-- <h1 style="color: #F07D00; font-size: xx-large;">QuantE Energy</h1> -->
+        </div>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="updates.html">Updates</a></li>
+            <li><a href="guarantee.html">Guarantee</a></li>
+
+        </ul>
+    </div>
+</nav>
+<section class="hero">
+    <div class="video-background">
+        <video autoplay muted loop playsinline class="video-background">
+            <source src="video/solar-roof.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1>Building Sustainable Housing Societies</h1>
+        </div>
+    </div>
+</section>
+<section class="contact-section">
+
+    <!-- LEFT SIDE: GOOGLE MAP -->
+    <div class="map-container">
+        <iframe
+                src="https://www.google.com/maps?q=India&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+        </iframe>
+    </div>
+    <!-- RIGHT SIDE: CONTACT FORM -->
+    <div class="contact-form">
+        <p class="tagline">— FOR A QUANTE WORLD</p>
+        <h2>Let's make a change</h2>
+        <p class="desc">
+            Put your idea for switch to green
+        </p>
+        <form>
+            <div class="row">
+                <input type="text" placeholder="Your name..." required>
+                <input type="email" placeholder="Email..." required>
+            </div>
+            <textarea placeholder="Write here..." rows="6"></textarea>
+            <button type="submit">CONTACT US</button>
+        </form>
+    </div>
+</section>
+<section class="section" id="contact">
+    <div class="container">
+        <h2 class="section-title">Get Started</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <!-- LEFT CONTENT -->
+                <div class="office-left">
+                    <p class="tagline">— QUANTE ENERGY WAY</p>
+                    <h2>Our office</h2>
+                    <p class="description">
+                        Our aims switch to green
+                    </p>
+                </div>
+                <div class="contact-details">
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@quanterenewables.com">info@quanterenewables.com</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919811463095">+91 98114 63095</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>QuantE Energy Tech Private Limited, 615, Tower A, 6th Floor, Spectrum Mall, Sector 75, Noida, Uttar Pradesh 201301</span>
+                    </div>
+                    <div>
+                        <button class="contact-btn">CONTACT US</button>
+                    </div>
+                </div>
+            </div>
+            <!-- <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder="Your Name" />
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Your Email" />
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" required placeholder="Your Phone" />
+              </div>
+              <div class="form-group">
+                <input type="text" id="society" name="society" required placeholder="Society Name" />
+              </div>
+              <div class="form-group">
+                <textarea id="message" name="message" required placeholder="Tell us about your society's requirements"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form> -->
+
+            <div class="map-container" id="map">
+                <div class="label-box">
+                    <h2>QuantE Energy Tech Private Limited</h2>
+                    <p>615, Tower A, 6th Floor, Spectrum Mall<br>Sector 75, Noida, Uttar Pradesh 201301</p>
+                </div>
+                <!-- Inside your map div -->
+                <a
+                        class="directions-button"
+                        href="https://www.google.com/maps/dir/?api=1&destination=28.57289783572693,77.37975023691018"
+                        target="_blank"
+                >
+                    <img src="img/logo.png" alt="Directions Icon" />
+                </a>
+
+                <!-- <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7007.608816054343!2d77.37535799330237!3d28.57563550278313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cef9c8ab18a4f%3A0xd4e1f2bee2052460!2sSpectrum%20Metro%20Mall!5e0!3m2!1sen!2sin!4v1744358340407!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe> -->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div class="footer-top">
+
+            <!-- LEFT LOGO -->
+            <div class="footer-brand">
+                <img src="img/Final-Quante-new.png" alt="QuantE Energy">
+            </div>
+
+            <!-- RIGHT BIG TEXT -->
+            <div class="footer-heading">
+                <h2>
+                    SWITCH TO GREEN
+                </h2>
+                <p>
+                    Innovative Energy Solutions for Housing Societies
+                </p>
+            </div>
+
+        </div>
+
+        <!-- MIDDLE GRID -->
+        <div class="footer-grid">
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Start a conversation:</h4>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    info@quanterenewables.com
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +91 98114 63095
+                </p>
+            </div>
+
+            <!-- ADDRESS -->
+            <div class="footer-col">
+                <h4>Find Our Address:</h4>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    QuantE Energy Tech Private Limited,<br>
+                    615, Tower A, 6th Floor, Spectrum Mall,<br>
+                    Sector 75, Noida, Uttar Pradesh 201301
+                </p>
+            </div>
+
+            <!-- SOCIAL -->
+            <div class="footer-col">
+                <h4>Our Social:</h4>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/114093931/admin/dashboard/"><i class="fab fa-linkedin"></i></a>
+
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="updates.html">Updates</a></li>
+                    <li><a href="guarantee.html">Guarantee</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+            <p>© 2025 QuantE Energy Tech Private Limited</p>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>
+
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    var lat = 28.57289783572693;
+    var lon = 77.37975023691018;
+
+    // Set map and move zoom control to bottom right
+    var map = L.map('map', {
+      zoomControl: false  // disable default control first
+    }).setView([lat, lon], 16);
+
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: ' OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Red marker icon
+    var redIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+      shadowUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
+    // Add marker
+    L.marker([lat, lon], {icon: redIcon}).addTo(map)
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+<script src="js/app.js"></script>
