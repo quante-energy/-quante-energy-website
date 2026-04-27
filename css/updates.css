@@ -350,13 +350,13 @@ h1, h2, h3, h4 {
 }
 
 /* RESPONSIVE */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
   }

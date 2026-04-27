@@ -437,7 +437,7 @@ h1, h2, h3, h4 {
     color : var(--secondary-color);
 }
 /* RESPONSIVE BREAKPOINTS */
-@media (max-width: 960px) {
+@media (max-width: 768px) {
     .meet-team-wrapper {
         padding : 0 32px;
     }
@@ -445,7 +445,7 @@ h1, h2, h3, h4 {
         grid-template-columns : repeat(2, 1fr);
     }
 }
-@media (max-width: 540px) {
+@media (max-width: 768px) {
     .meet-team-section {
         padding : 50px 0 70px;
     }
