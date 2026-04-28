@@ -127,7 +127,7 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const submitButton = contactForm.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
     submitButton.textContent = 'Sending...';
@@ -141,7 +141,7 @@ if (contactForm) {
       // Here you would typically send the data to your backend
       // For now, we'll just simulate a delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Show success message
       alert('Thank you for your message! We will get back to you soon.');
       contactForm.reset();
@@ -160,12 +160,12 @@ const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
-  
+
   if (currentScroll <= 0) {
     navbar.classList.remove('scroll-up');
     return;
   }
-  
+
   if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
     // Scrolling down
     navbar.classList.remove('scroll-up');
@@ -175,6 +175,20 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('scroll-down');
     navbar.classList.add('scroll-up');
   }
-  
+
   lastScroll = currentScroll;
 });
+
+// Qode initialises Owl Carousel like this:
+$('.qode-portfolio-list-holder').owlCarousel({
+    loop:       false,
+    margin:     24,        // gap between cards
+    nav:        true,      // show prev/next arrows
+    dots:       false,
+    responsive: {
+        0:   { items: 1 },
+        600: { items: 2 },
+        900: { items: 3 },
+    }
+});
+

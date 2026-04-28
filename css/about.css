@@ -1,0 +1,665 @@
+/* Modern CSS with animations and responsive design */
+
+:root {
+  --primary-color: #27313f;
+  --secondary-color: #FF9A33;
+  --text-color: #27313f;
+  --light-bg: #f0f9f4;
+  --dark-bg: #27313f;
+  --transition: all 0.3s ease;
+  --tagline-divider   : var(--secondary-color);     /* <hr> color */
+  --mt-gold      : var(--secondary-color);     /* Gold/yellow — bubble, CTA underline */
+  --mt-name      : var(--primary-color);     /* Headings */
+  --mt-role      : var(--primary-color);     /* Role label */
+  --mt-white     : var(--light-bg);     /* Page bg, icon colors */
+  --mt-divider   : var(--secondary-color);     /* <hr> color */
+  --mt-ease      : cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #27313f;
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.section {
+  padding: 4rem 1rem;
+}
+
+.section.light {
+  background-color: white;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 5000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.navbar .container h1,
+.navbar .container .logo {
+  display: flex;
+  align-items: center;
+  margin: 0; /* Remove extra margin */
+  padding: 0; /* Remove extra padding */
+}
+
+.logo img {
+  height: 90px; /* Adjust size as needed */
+  /* margin-right: 10px; Adjust space between h1 and logo */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #27313f;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--text-color);
+}
+
+.nav-btn {
+  background: var(--primary-color);
+  color: white !important;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 30px;
+  height: 3px;
+  background: var(--text-color);
+  transition: var(--transition);
+}
+/* - Section */
+.hero {
+  margin-top: 102px; /* Adjust for fixed navbar */
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease 0.2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.hero-cta {
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease 0.4s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/*-----who-we-are------*/
+.who-we-are-section {
+    padding: 80px 60px;
+    background: #f5f5f5;
+}
+.tagline {
+    letter-spacing: 4px;
+    font-size: 14px;
+    color: #27313f;
+    margin-bottom: 20px;
+}
+.main-heading {
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: bold;
+    max-width: 900px;
+    margin-bottom: 60px;
+}
+.tagline-divider {
+    border     : none;
+    border-top : 1px solid var(--mt-divider);
+    margin     : 0 0 50px 0;
+
+    /* line expands left → right */
+    animation        : mtExpandLine 0.9s ease both 0.2s;
+    transform-origin : left center;
+}
+
+@keyframes mtExpandLine {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+}
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* COLUMN TEXT */
+.about-grid h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about-grid p {
+    color: #27313f;
+    line-height: 1.7;
+    font-size: 20px;
+}
+
+
+/* SECTION OUTER WRAPPER */
+.meet-team-section {
+    background : var(--light-bg);
+    padding    : 70px 0 90px;
+    width      : 100%;
+    overflow   : hidden;
+}
+
+.meet-team-wrapper {
+    max-width : 1380px;
+    margin    : 0 auto;
+    padding   : 0 70px;
+}
+.meet-header {
+    display         : flex;
+    justify-content : space-between;   /* title LEFT, cta RIGHT */
+    align-items     : flex-start;
+    margin-bottom   : 24px;
+
+    /* slide down on load */
+    animation : mtSlideDown 0.7s ease both;
+}
+
+@keyframes mtSlideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.meet-title {
+    font-family    : 'Poppins', sans-serif;
+    font-size      : clamp(2.2rem, 4.5vw, 3.8rem);
+    font-weight    : 800;
+    color          : var(--primary-color);
+    line-height    : 1.1;
+    letter-spacing : -0.025em;
+    margin         : 0;
+}
+
+/* "BECOME A MEMBER" link */
+.meet-cta {
+    font-size       : 0.7rem;
+    font-weight     : 700;
+    letter-spacing  : 0.16em;
+    text-transform  : uppercase;
+    color           : var(--primary-color);
+    text-decoration : none;
+    border-bottom   : 2px solid var(--secondary-color);
+    padding-bottom  : 3px;
+    margin-top      : 12px;
+    white-space     : nowrap;
+    position        : relative;
+    transition      : color 0.3s ease;
+}
+
+.meet-cta:hover {
+    color : var(--secondary-color);
+}
+.meet-divider {
+    border     : none;
+    border-top : 1px solid var(--mt-divider);
+    margin     : 0 0 50px 0;
+
+    /* line expands left → right */
+    animation        : mtExpandLine 0.9s ease both 0.2s;
+    transform-origin : left center;
+}
+
+@keyframes mtExpandLine {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+}
+
+.meet-grid {
+    display               : grid;
+    grid-template-columns : repeat(5, 1fr);
+    gap                   : 10px;
+}
+.meet-card {
+    display        : flex;
+    flex-direction : column;
+    cursor         : pointer;
+
+    /* hidden — JS adds .mt-visible to animate in */
+    opacity    : 0;
+    transform  : translateY(36px);
+    transition : opacity 0.6s ease, transform 0.6s ease;
+}
+/* JS triggers this class via IntersectionObserver */
+.meet-card.mt-visible {
+    opacity   : 1;
+    transform : translateY(0);
+}
+/* Stagger each card's entrance */
+.meet-card:nth-child(1) { transition-delay: 0.05s; }
+.meet-card:nth-child(2) { transition-delay: 0.17s; }
+.meet-card:nth-child(3) { transition-delay: 0.29s; }
+.meet-card:nth-child(4) { transition-delay: 0.41s; }
+.meet-card:nth-child(5) { transition-delay: 0.53s; }
+
+/* IMAGE WRAPPER Portrait ratio trick using padding-bottom */
+.meet-img-wrap {
+    position       : relative;
+    width          : 100%;
+    padding-bottom : 120%;      /* height = 120% of width = portrait shape */
+    overflow       : hidden;
+    background     : var(--light-bg);   /* placeholder while image loads */
+}
+/* Photo fills the wrapper completely */
+.meet-img-wrap img {
+    position   : absolute;
+    inset      : 0;             /* shorthand: top/right/bottom/left = 0 */
+    width      : 100%;
+    height     : 100%;
+    object-fit : cover;         /* crops to fill without stretching */
+    display    : block;
+    transition : transform 0.55s var(--mt-ease);
+}
+/* Photo zooms in on card hover */
+.meet-card:hover .meet-img-wrap img {
+    transform : scale(1.06);
+}
+/* GOLD SOCIAL BUBBLE  (top-left corner)
+   Hidden → visible on card hover */
+.meet-bubble {
+    position      : absolute;
+    top           : -5px;
+    left          : -5px;
+    width         : 60px;
+    height        : 60px;
+    background    : var(--secondary-color);
+    border-radius : 50%;            /* circle */
+    z-index       : 3;
+
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    gap             : 10px;
+
+    /* HIDDEN by default */
+    opacity   : 0;
+    transform : scale(0.5) rotate(-20deg);
+    transition: opacity 0.32s ease, transform 0.32s ease;
+}
+/* SHOW bubble when card is hovered */
+.meet-card:hover .meet-bubble {
+    opacity   : 1;
+    transform : scale(1) rotate(0deg);  /* grows + straightens */
+}
+/* Social icon links inside bubble */
+.bubble-link {
+    color      : var(--primary-color);
+    display    : flex;
+    align-items: center;
+    transition : transform 0.2s ease;
+}
+.bubble-link:hover {
+    transform : scale(1.3);     /* icon pops on hover */
+}
+.meet-info {
+    padding-top : 18px;
+}
+.meet-role {
+    font-size      : 0.67rem;
+    font-weight    : 700;
+    letter-spacing : 0.2em;
+    text-transform : uppercase;
+    color          : #27313f;
+    margin-bottom  : 6px;
+    margin-top     : 0;
+}
+.meet-name {
+    font-family    : 'Inter Regular', sans-serif;
+    font-size      : 1.35rem;
+    font-weight    : 700;
+    color          : var(--primary-color);
+    margin         : 0;
+    line-height    : 1.2;
+    letter-spacing : -0.01em;
+    transition     : color 0.3s ease;
+}
+/* Name turns gold on hover */
+.meet-card:hover .meet-name {
+    color : var(--secondary-color);
+}
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 768px) {
+    .meet-team-wrapper {
+        padding : 0 32px;
+    }
+    .meet-grid {
+        grid-template-columns : repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .meet-team-section {
+        padding : 50px 0 70px;
+    }
+    .meet-team-wrapper {
+        padding : 0 20px;
+    }
+    .meet-header {
+        flex-direction : column;
+        gap            : 14px;
+    }
+    .meet-grid {
+        grid-template-columns : 1fr;
+    }
+}
+
+/*----------------investors----------*/
+.investors-section {
+  padding: 80px 0;
+}
+
+.investors-section-header {
+  margin-bottom: 40px;
+}
+
+.investors-section-tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #27313f;
+  font-weight: bold;
+}
+
+.investors-section-title {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+/* GRID like your reference */
+.investor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid #eee;
+}
+
+/* CARD STYLE */
+.investor-card {
+  background: var(--light-bg);
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  padding: 10px 0px;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* IMAGE */
+.investor-card img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.investor-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.investor-card p {
+  font-size: 15px;
+  color: #27313f;
+}
+
+/* HOVER EFFECT */
+.investor-card:hover {
+  background: var(--secondary-color);
+  color: #27313f;
+  transform: translateY(-8px);
+}
+
+.investor-card:hover p {
+  color: #27313f;
+}
+
+/* ANIMATION ACTIVE */
+.investor-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/*-----Footer----*/
+.main-footer {
+    background: #27313f;
+    color: #fff;
+    padding: 80px 0 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TOP SECTION */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.footer-brand img {
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+.footer-heading {
+  text-align: center;
+  padding-top: 30px;   /* space from top */
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-heading h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.footer-heading p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* GRID */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    color: #aaa;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+/* ICON STYLE */
+.footer-col i {
+    color: #FF9A33;
+    margin-top: 4px;
+}
+
+/* SOCIAL */
+.social-icons a {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #FF9A33;
+}
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: var(--transition);
+}
+.footer-links a:hover {
+  color: var(--secondary-color);
+}
+/* BOTTOM */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-heading h2 {
+        font-size: 28px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
