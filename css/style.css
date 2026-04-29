@@ -276,7 +276,7 @@ h1, h2, h3, h4 {
   letter-spacing: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .stats-section {
     gap: 32px 24px;
     padding: 40px 20px;
