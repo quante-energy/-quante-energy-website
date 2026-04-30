@@ -197,42 +197,45 @@ h1, h2, h3, h4 {
 }
 
 .stats-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;           /* wraps on smaller screens */
   gap: 40px 60px;
   padding: 60px 40px;
   max-width: 1200px;
   width: 100%;
+  margin: 0 auto; /* center properly */
 }
 
 .stat-card {
-  position: relative;        /* needed so bg-number sits behind */
+  position: relative;
   display: flex;
   align-items: center;
   gap: 14px;
   min-width: 250px;
+  min-height: 100px; /* alignment fix */
 }
 
+/* FIXED font + layering */
 .bg-number {
   position: absolute;
-  left: -18px;               /* slightly bleeds left */
+  left: -18px;
   top: 50%;
   transform: translateY(-50%);
-  font-family: 'Inter Regular' sans-sarif;
+  font-family: 'Inter', sans-serif; /* FIXED */
   font-size: 130px;
   font-weight: 500;
-  color: #f0f0f0;            /* very light grey */
+  color: #f0f0f0;
   text-shadow: -1px -1px 0 #dcdcdc, 1px -1px 0 #dcdcdc, -1px 1px 0 #dcdcdc, 1px 1px 0 #dcdcdc;
   line-height: 1;
-  user-select: none;         /* not selectable */
-  z-index: 1;                /* sits behind content */
+  user-select: none;
+  z-index: 0; /* behind content */
   letter-spacing: -4px;
 }
 
 .stat-content {
-  position: relative;        /* sits above bg-number */
+  position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -246,18 +249,17 @@ h1, h2, h3, h4 {
   color: #27313f;
   line-height: 74px;
   letter-spacing: -.02em;
-  margin-right: 25px
+  margin-right: 25px;
 }
 
 .stat-label {
   display: flex;
-  flex-direction: column;    /* stacks top and bottom labels */
+  flex-direction: column;
   gap: 2px;
 }
 
-/* Small spaced uppercase label e.g. "BILL" */
 .label-top {
-  font-family: 'Inter Regular' sans-serif;;
+  font-family: 'Inter', sans-serif; /* FIXED */
   font-size: 15px;
   line-height: 2.545em;
   font-weight: 500;
@@ -266,32 +268,32 @@ h1, h2, h3, h4 {
   color: #27313f;
 }
 
-/* Bold readable label e.g. "Reduction" */
 .label-bottom {
   font-family: 'Poppins', sans-serif;
   font-size: 25px;
   line-height: 1.273em;
   font-weight: 700;
   color: #27313f;
-  letter-spacing: 0;
 }
-
-@media (max-width: 1280px) {
+@media (max-width: 1366px) {
   .stats-section {
-    gap: 32px 24px;
-    padding: 40px 20px;
+    max-width: 1050px;
+    padding: 50px 30px;
+    gap: 35px 40px;
   }
 
   .bg-number {
-    font-size: 90px;
+    font-size: 100px;
+    left: -12px;
   }
 
   .stat-number {
     font-size: 48px;
+    line-height: normal;
   }
 
   .label-bottom {
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 /*--------------INTRODUCTION-SECTION------------------------------ */
