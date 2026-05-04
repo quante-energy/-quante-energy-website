@@ -134,6 +134,8 @@ h1, h2, h3, h4 {
   background: var(--text-color);
   transition: var(--transition);
 }
+
+
 /* - Section */
 .hero {
   margin-top: 102px; /* Adjust for fixed navbar */
@@ -284,7 +286,7 @@ h1, h2, h3, h4 {
 .meet-title {
     font-family    : 'Poppins', sans-serif;
     font-size      : clamp(2.2rem, 4.5vw, 3.8rem);
-    font-weight    : 800;
+    font-weight    : 700;
     color          : var(--primary-color);
     line-height    : 1.1;
     letter-spacing : -0.025em;
