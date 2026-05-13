@@ -779,7 +779,7 @@ h1, h2, h3, h4 {
 
 /* ICON STYLE */
 .footer-col i {
-    color: #FF9A33;
+    color: #f4c542;
     margin-top: 4px;
 }
 
@@ -792,7 +792,7 @@ h1, h2, h3, h4 {
 }
 
 .social-icons a:hover {
-    color: #FF9A33;
+    color: #f4c542;
 }
 .footer-links ul {
   list-style: none;
