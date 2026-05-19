@@ -45,21 +45,12 @@
 /* Modern CSS with animations and responsive design */
 
 :root {
-  --primary-color: #008f39;
-  --secondary-color: #00c853;
-  --text-color: #000000;
+  --primary-color: #27313f;
+  --secondary-color: #FF9A33;
+  --text-color: #27313f;
   --light-bg: #f0f9f4;
   --dark-bg: #27313f;
-  --green:     #3a6b4b;
-  --green-lt:  #4e8c62;
-  --green-bg:  #f2f7f4;
-  --dark:      #1a1f1c;
-  --mid:       #5a6460;
-  --light:     #eef3f0;
-  --white:     #ffffff;
-  --radius:    12px;
   --transition: all 0.3s ease;
-  --transition: 0.42s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -338,7 +329,7 @@ h1, h2, h3, h4 {
 
 .card-category {
   font-size: 14px;
-  color: #888;
+  color: #27313f;
 }
 
 .card-title {
@@ -347,7 +338,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
   margin-top: 5px;
   text-decoration: none;
-  color: #000;
+  color: #27313f;
 }
 
 /* RESPONSIVE */
@@ -381,7 +372,7 @@ h1, h2, h3, h4 {
 }
 
 .footer-brand img {
-    width: 180px;
+    width: 100px;
     margin-bottom: 10px;
 }
 
@@ -430,7 +421,7 @@ h1, h2, h3, h4 {
 
 /* ICON STYLE */
 .footer-col i {
-    color: #f4c542;
+    color: var(--secondary-color);
     margin-top: 4px;
 }
 
@@ -443,7 +434,7 @@ h1, h2, h3, h4 {
 }
 
 .social-icons a:hover {
-    color: #f4c542;
+    color: var(--secondary-color);
 }
 .footer-links ul {
   list-style: none;

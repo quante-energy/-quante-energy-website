@@ -29,7 +29,6 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="updates.html">Updates</a></li>
-            <li><a href="guarantee.html">Guarantee</a></li>
 
         </ul>
     </div>
@@ -117,7 +116,7 @@
         </div>
     </div>
 </section>
-<section class="circle-section">
+<section class="circle-section" style="display: none;">
 
     <div class="circle"></div>
 
@@ -132,6 +131,34 @@
     </h2>
 
 </section>
+
+<section class="bio-energy-section" id="bio-energy">
+    <div class="bio-wrapper">
+
+        <div class="bio-left">
+            <h2 class="bio-title">
+                QuantE Energy
+            </h2>
+            <p class="bio-para">
+                We are an innovative green energy startup offering
+                IoT-enabled solar, EV, and sustainability solutions
+                to residential societies—a blue ocean market. Our
+                unique OPEX-based model removes CAPEX barriers and
+                ensures hands-free operations, solving two major industry
+                pain points: Affordability and Maintenance.
+            </p>
+        </div>
+        <div class="bio-right">
+
+            <!-- Chart.js draws inside this canvas -->
+            <div class="bio-graph-wrap">
+                <img src="img/home.jpg" id="biograph"/>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 </section>
 <section class="section cta" id="cta">
     <div class="container">
@@ -155,55 +182,55 @@
                     <span>Empowered Communities</span>
                 </div>
             </div>
-            <a href="#contact" class="btn btn-primary">Get Started Today</a>
+            <a href="contact.html" class="btn btn-primary">Get Started Today</a>
         </div>
     </div>
 </section>
-<section class="bio-energy-section" id="bio-energy" style="display:none;">
-    <div class="bio-wrapper">
 
-        <div class="bio-left">
-            <div class="bio-tag">
-                <span class="tag-dash"></span>
-                <span class="tag-label">QuantE METHOD</span>
+<section>
+    <div class="ppa-section">
+        <div class="container">
+            <!-- Left Image -->
+            <div class="ppa-left">
+                <img src="img/ppa.jpg" alt="PPA">
             </div>
-            <h2 class="bio-title">
-                Most used bio energy
-                systems in the world
-            </h2>
-            <p class="bio-para">
-                Rising electricity costs are one
-                of the biggest concerns for housing
-                societies today. Common area electricity
-                expenses for lifts, water pumps, lighting,
-                and security systems can significantly
-                increase maintenance charges.
-            </p>
+            <!-- Right Content -->
+            <div class="ppa-right">
+
+                <div class="ppa-item">
+                    <h2 class="ppa-title">How Our PPA Works</h2>
+                    <p class="ppa-content">
+                        QuantE Energy Tech Pvt Ltd is pioneering green energy solutions like
+                        Solar, EV etc for residential societies, with a unique IoT enabled
+                        OPEX-based PPA models that simplifies asset management.
+                    </p>
+                    <div class="ppa-features">
+                        <div class="ppa-feature">
+                            <i class="fas fa-file-signature"></i>
+                            <p>An onsite solar PPA is a contract between a developer and a customer with suitable space to install a solar PV system.</p>
+                        </div>
+                        <div class="ppa-feature">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <p>The customer only pays for the energy produced by the plant. Hence, the incentives of both parties are fully aligned.</p>
+                        </div>
+                        <div class="ppa-feature">
+                            <i class="fas fa-tools"></i>
+                            <p><strong>The developer installs and maintains the solar PV system</strong> for a fixed term and sells the electricity to the customer at a tariff much lower than the grid.</p>
+                        </div>
+                        <div class="ppa-feature">
+                            <i class="fas fa-piggy-bank"></i>
+                            <p><strong>The customer pays no upfront costs (capex)</strong> for the solar PV system and enjoys the savings, energy security and sustainability of solar power delivered at a fixed tariff.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="bio-right">
-
-            <!-- Chart.js draws inside this canvas -->
-            <div class="bio-graph-wrap">
-                <img src="img/home.jpg" id="biograph"/>
-            </div>
-
-            <!-- Custom legend (vertical, right of chart) -->
-            <div class="bio-legend">
-
-                <div class="bio-legend-item">
-                    <span class="bio-dot solar"></span>
-                    <span class="bio-legend-text">Solar energy</span>
-                </div>
-
-                <div class="bio-legend-item">
-                    <span class="bio-dot hydro"></span>
-                    <span class="bio-legend-text">Hydropower</span>
-                </div>
-            </div>
+        <div class="QuantE_Energy_highlight">
+            <p>No CAPEX, no hassles, no risks. Just green savings</p>
         </div>
     </div>
 </section>
-<section class="portfolio-section">
+<section class="portfolio-section" style="display: none;">
 
     <div class="section-header">
         <div>
@@ -367,21 +394,16 @@
     <div class="container">
 
         <!-- TOP SECTION -->
-        <div class="footer-top">
+        <div class="footer-top" style="display: none">
 
             <!-- LEFT LOGO -->
-            <div class="footer-brand">
-                <img src="img/Final-Quante-new.png" alt="QuantE Energy">
-            </div>
+
 
             <!-- RIGHT BIG TEXT -->
             <div class="footer-heading">
                 <h2>
-                    SWITCH TO GREEN
-                </h2>
-                <p>
                     Innovative Energy Solutions for Housing Societies
-                </p>
+                </h2>
             </div>
 
         </div>
@@ -392,6 +414,9 @@
             <!-- CONTACT -->
             <div class="footer-col">
                 <h4>Start a conversation:</h4>
+                <div class="footer-brand">
+                    <img src="img/Final-Quante-new.png" alt="QuantE Energy">
+                </div>
                 <p>
                     <i class="fas fa-envelope"></i>
                     info@quanterenewables.com
@@ -417,7 +442,15 @@
             <div class="footer-col">
                 <h4>Our Social:</h4>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/company/114093931/admin/dashboard/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/company/114093931/admin/dashboard/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61588737334330" target="_blank"><i class="fab fa-facebook"></i></a>
+
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/quante_energy/" target="_blank"><i class="fab fa-instagram"></i></a>
 
                 </div>
             </div>
@@ -438,8 +471,8 @@
 
         <!-- BOTTOM -->
         <div class="footer-bottom">
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
+            <p style="display: none;">Terms & Conditions</p>
+            <p style="display: none;">Privacy Policy</p>
             <p>© 2025 QuantE Energy Tech Private Limited</p>
         </div>
 

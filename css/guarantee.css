@@ -481,7 +481,7 @@ h1, h2, h3, h4 {
 }
 
 .footer-brand img {
-    width: 180px;
+    width: 100px;
     margin-bottom: 10px;
 }
 
@@ -530,7 +530,7 @@ h1, h2, h3, h4 {
 
 /* ICON STYLE */
 .footer-col i {
-    color: #f4c542;
+    color: var(--secondary-color);
     margin-top: 4px;
 }
 
@@ -543,7 +543,7 @@ h1, h2, h3, h4 {
 }
 
 .social-icons a:hover {
-    color: #f4c542;
+    color: var(--secondary-color);
 }
 .footer-links ul {
   list-style: none;

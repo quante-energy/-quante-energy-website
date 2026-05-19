@@ -372,7 +372,7 @@ button:hover {
 }
 
 .footer-brand img {
-    width: 180px;
+    width: 100px;
     margin-bottom: 10px;
 }
 
@@ -421,7 +421,7 @@ button:hover {
 
 /* ICON STYLE */
 .footer-col i {
-    color: #FF9A33;
+    color: var(--secondary-color);
     margin-top: 4px;
 }
 
@@ -434,7 +434,7 @@ button:hover {
 }
 
 .social-icons a:hover {
-    color: #FF9A33;
+    color: var(--secondary-color);
 }
 .footer-links ul {
   list-style: none;
