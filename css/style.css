@@ -119,6 +119,9 @@ h1, h2, h3, h4 {
 .nav-links a:hover {
   color: var(--text-color);
 }
+.nav-links.active{
+    display:flex;
+}
 
 .nav-toggle {
   display: none;

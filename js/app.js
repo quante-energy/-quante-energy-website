@@ -2,12 +2,14 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // Navigation toggle for mobile
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
 
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  navToggle.classList.toggle('active');
+navToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+    navToggle.classList.toggle("active");
+
 });
 
 // Close mobile menu when clicking outside
