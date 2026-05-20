@@ -170,6 +170,76 @@ h1, h2, h3, h4 {
   background: var(--text-color);
   transition: var(--transition);
 }
+/* Hamburger Animation */
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ========================= */
+/* Tablet & Mobile */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding: 2rem 0;
+
+    display: none;
+
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .logo img {
+    height: 65px;
+  }
+
+  .navbar .container {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .logo img {
+    height: 55px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+}
+
 /* - Section */
 .hero {
   margin-top: 102px; /* Adjust for fixed navbar */
