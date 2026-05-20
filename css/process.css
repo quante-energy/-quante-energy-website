@@ -50,7 +50,8 @@ h1, h2, h3, h4 {
 .section-title {
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
   color: var(--primary-color);
 }
 
@@ -59,7 +60,7 @@ h1, h2, h3, h4 {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 20px 0;
 }
 
 .section {
@@ -68,6 +69,7 @@ h1, h2, h3, h4 {
 
 .section.light {
   background-color: var(--light-bg);
+  padding: 20px 0;
 }
 
 /* Navigation */
@@ -211,13 +213,14 @@ h1, h2, h3, h4 {
 
 /*------challenge------*/
 .challenges-section {
-  padding: 60px 30px;
+  padding: 20px 0px;
   background: var(--light-bg);
 }
 .challenges-title {
   font-size: 2.5rem;
+  font-weight: 600;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color: var(--text-color);
 ;
 }
@@ -241,7 +244,7 @@ h1, h2, h3, h4 {
 }
 
 .challenges-card {
-  padding: 40px;
+  padding:20px;
   border: 1px solid #eee;
   transition: all 0.4s ease;
   background: var(--light-bg);
@@ -260,7 +263,7 @@ h1, h2, h3, h4 {
 }
 
 
-/* ===== SOLUTION SECTION (3 month plan) ===== */
+/* ===== SOLUTION SECTION & (3 month plan) ===== */
 /* LAYOUT */
 .process-timeline3 {
   display: grid;
@@ -329,7 +332,7 @@ h1, h2, h3, h4 {
   color: var(--light-bg);
 }
 
-/*---------------SECTION ----------------*/
+/*---------------3 month plan SECTION ----------------*/
 /* Process Timeline */
 .process-timeline {
   display: grid;
@@ -485,7 +488,7 @@ h1, h2, h3, h4 {
 .arrow-segment {
   position: relative;
   background-color: var(--primary-color);
-  height: 6px;
+  height: 5px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -502,7 +505,7 @@ h1, h2, h3, h4 {
 
 .arrow-icon {
   color: var(--primary-color);
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .arrow-text {
@@ -510,9 +513,9 @@ h1, h2, h3, h4 {
   left: 50%;
   top: -40px;
   transform: translateX(-50%);
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: bolder;
-  background: #fff;
+  background: var(--light-bg);
   padding: 0 6px;
   color: #27313f;
 }
@@ -540,7 +543,7 @@ h1, h2, h3, h4 {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 10px;
 }
 
 /* CARD */
@@ -591,7 +594,7 @@ h1, h2, h3, h4 {
 /* ------IOT-------------------------------------------------- */
 .iot-section .container {
   display: flex;
-  height: 100vh;
+  height: 80vh;
 }
 
 .left-iot {
@@ -606,7 +609,7 @@ h1, h2, h3, h4 {
 
 .right-iot {
   width: 50%;
-  padding: 60px;
+  padding: 50px;
   background: var(--light-bg);
 }
 .iot-item {
@@ -633,7 +636,7 @@ h1, h2, h3, h4 {
 .main-footer {
     background: #27313f;
     color: #fff;
-    padding: 80px 0 40px;
+    padding: 20px 0 0px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -652,7 +655,7 @@ h1, h2, h3, h4 {
 
 .footer-heading {
   text-align: center;
-  padding-top: 30px;   /* space from top */
+  padding-top: 20px;   /* space from top */
   margin-bottom: 30px;
   max-width: 800px;
   margin-left: auto;

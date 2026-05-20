@@ -468,7 +468,7 @@ h1, h2, h3, h4 {
 .main-footer {
     background: #27313f;
     color: #fff;
-    padding: 80px 0 40px;
+    padding: 20px 0 0px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -487,7 +487,7 @@ h1, h2, h3, h4 {
 
 .footer-heading {
   text-align: center;
-  padding-top: 30px;   /* space from top */
+  padding-top: 20px;   /* space from top */
   margin-bottom: 30px;
   max-width: 800px;
   margin-left: auto;
@@ -590,3 +590,4 @@ h1, h2, h3, h4 {
         text-align: center;
     }
 }
+

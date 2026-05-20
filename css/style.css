@@ -64,7 +64,7 @@ h1, h2, h3, h4 {
 }
 
 .section {
-  padding: 4rem 1rem;
+  padding: 1rem 0rem;
 }
 
 .section.light {
@@ -120,13 +120,6 @@ h1, h2, h3, h4 {
   color: var(--text-color);
 }
 
-.nav-btn {
-  background: var(--primary-color);
-  color: white !important;
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px;
-}
-
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -139,6 +132,75 @@ h1, h2, h3, h4 {
   height: 3px;
   background: var(--text-color);
   transition: var(--transition);
+}
+/* Hamburger Animation */
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ========================= */
+/* Tablet & Mobile */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding: 2rem 0;
+
+    display: none;
+
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .logo img {
+    height: 65px;
+  }
+
+  .navbar .container {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .logo img {
+    height: 55px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
 }
 /* - Section */
 .hero {
@@ -310,7 +372,7 @@ h1, h2, h3, h4 {
   }
 }
 /*--------------INTRODUCTION-SECTION------------------------------ */
-.circle-section {
+.intro-section {
     position: relative;
     height: 450px;
     display: flex;
@@ -331,7 +393,7 @@ h1, h2, h3, h4 {
 }
 
 /* YELLOW CIRCLE */
-.circle {
+.intro-circle {
     position: absolute;
     width: 350px;
     height: 350px;
@@ -348,7 +410,7 @@ h1, h2, h3, h4 {
 /* -------------bio energy section ----------------*/
 .bio-energy-section {
     background : var(--bio-bg);
-    padding    : 90px 0;
+    padding    : 20px 0;
     width      : 100%;
     overflow   : hidden;         /* clip scroll animations */
 }
@@ -416,7 +478,7 @@ h1, h2, h3, h4 {
   background: linear-gradient(135deg, #27313f 0%, #27313f 100%);
   color: white;
   text-align: center;
-  padding: 4rem 0;
+  padding: 20px 0;
 }
 .btn-primary {
   color: #ffffff;
@@ -443,6 +505,7 @@ h1, h2, h3, h4 {
 .ppa-section .container {
   display: flex;
   height: 100vh;
+  padding: 20px 0;
 }
 
 .ppa-left {
@@ -473,7 +536,7 @@ h1, h2, h3, h4 {
 }
 .ppa-title {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 600;
   position: relative;
 }
 .ppa-features {
@@ -782,7 +845,7 @@ h1, h2, h3, h4 {
 .main-footer {
     background: #27313f;
     color: #fff;
-    padding: 80px 0 40px;
+    padding: 20px 0 0px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -801,7 +864,7 @@ h1, h2, h3, h4 {
 
 .footer-heading {
   text-align: center;
-  padding-top: 30px;   /* space from top */
+  padding-top: 20px;   /* space from top */
   margin-bottom: 30px;
   max-width: 800px;
   margin-left: auto;

@@ -36,8 +36,9 @@ h1, h2, h3, h4 {
 
 .section-title {
   font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color: #27313f;
 }
 
@@ -50,7 +51,7 @@ h1, h2, h3, h4 {
 }
 
 .section {
-  padding: 4rem 1rem;
+  padding: 1rem 0rem;
 }
 
 .section.light {
@@ -226,13 +227,14 @@ h1, h2, h3, h4 {
 }
 
 .contact-form h2 {
-    font-size: 35px;
-    margin: 10px 0;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0px 0;
 }
 
 .desc {
     color: #27313f;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 /* FORM */
@@ -359,7 +361,7 @@ button:hover {
 .main-footer {
     background: #27313f;
     color: #fff;
-    padding: 80px 0 40px;
+    padding: 20px 0 0px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -378,7 +380,7 @@ button:hover {
 
 .footer-heading {
   text-align: center;
-  padding-top: 30px;   /* space from top */
+  padding-top: 20px;   /* space from top */
   margin-bottom: 30px;
   max-width: 800px;
   margin-left: auto;
