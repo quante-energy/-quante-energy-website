@@ -152,7 +152,7 @@
 
             <!-- Chart.js draws inside this canvas -->
             <div class="bio-graph-wrap">
-                <img src="img/home.jpg" id="biograph"/>
+                <img src="img/home.jpg" id="biograph" alt="biograph"/>
             </div>
 
         </div>
@@ -274,7 +274,7 @@
                     <img src="img/blog/blog2.jpeg" alt="Solar Energy">
                     <div class="card-arrow">
                         <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        <a href="https://ascendants.in/business-stories/quante-energy-raises-500k-seed-tdv-partners-angels/"/>
+                        <a href="https://ascendants.in/business-stories/quante-energy-raises-500k-seed-tdv-partners-angels/"></a>
                     </div>
                 </div>
                 <div class="card-info">
@@ -323,7 +323,7 @@
                     <img src="img/blog/blog5.jpeg" alt="Blog 5">
                     <div class="card-arrow">
                         <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        <a href="https://energy.economictimes.indiatimes.com/news/renewable/quante-energy-secures-500k-seed-funding-to-power-residential-solar-push/123697003"/>
+                        <a href="https://energy.economictimes.indiatimes.com/news/renewable/quante-energy-secures-500k-seed-funding-to-power-residential-solar-push/123697003"></a>
                     </div>
                 </div>
                 <div class="card-info">
@@ -352,7 +352,7 @@
                     <img src="img/blog/blog7.jpeg" alt="New Projects">
                     <div class="card-arrow">
                         <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        <a href="https://inshorts.com/en/news/quante-energy-raises--500-000-to-scale-rooftop-solar-push-1756977739973"/>
+                        <a href="https://inshorts.com/en/news/quante-energy-raises--500-000-to-scale-rooftop-solar-push-1756977739973"></a>
                     </div>
                 </div>
                 <div class="card-info">
@@ -367,7 +367,7 @@
                     <img src="img/blog/blog8.jpeg" alt="New Projects">
                     <div class="card-arrow">
                         <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                        <a href="https://www.constructionworld.in/energy-infrastructure/power-and-renewable-energy/quante---s-zero-capex-solar-slashes-housing-bills-by-50-/86806"/>
+                        <a href="https://www.constructionworld.in/energy-infrastructure/power-and-renewable-energy/quante---s-zero-capex-solar-slashes-housing-bills-by-50-/86806"></a>
                     </div>
                 </div>
                 <div class="card-info">
@@ -594,14 +594,17 @@
 </script>
 <script>
 
-    const navToggle = document.querySelector(".nav-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    document.addEventListener("DOMContentLoaded", function () {
 
-    navToggle.addEventListener("click", () => {
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
 
-      navLinks.classList.toggle("active");
+      navToggle.addEventListener("click", function () {
 
-      navToggle.classList.toggle("active");
+        navLinks.classList.toggle("active");
+        navToggle.classList.toggle("active");
+
+      });
 
     });
 
