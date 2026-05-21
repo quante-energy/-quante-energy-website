@@ -319,9 +319,14 @@ h1, h2, h3, h4 {
     to   { transform: scaleX(1); }
 }
 .about-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+.about-grid > div{
+    flex:1;
+    min-width:250px;
 }
 
 /* COLUMN TEXT */
@@ -408,10 +413,10 @@ h1, h2, h3, h4 {
     to   { transform: scaleX(1); }
 }
 
-.meet-grid {
-    display               : grid;
-    grid-template-columns : repeat(5, 1fr);
-    gap                   : 10px;
+.meet-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
 }
 .meet-card {
     display        : flex;
@@ -569,8 +574,7 @@ h1, h2, h3, h4 {
 /* GRID like your reference */
 .investor-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));  gap: 0;
   border: 1px solid #eee;
 }
 
@@ -746,4 +750,229 @@ h1, h2, h3, h4 {
         gap: 10px;
         text-align: center;
     }
+}
+
+
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* ---------- Large Tablets (1024px) ---------- */
+@media screen and (max-width: 1024px) {
+
+  .container{
+    width:95%;
+  }
+
+  .hero h1{
+    font-size:3rem;
+  }
+
+  .about-grid{
+    gap:30px;
+  }
+
+  .meet-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .investor-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .footer-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+  }
+}
+
+
+/* ---------- Tablets (768px) ---------- */
+@media screen and (max-width: 768px) {
+
+  .hero{
+    margin-top:80px;
+    min-height:500px;
+  }
+
+  .hero h1{
+    font-size:2.5rem;
+  }
+
+  .hero p{
+    font-size:1.2rem;
+  }
+
+  /* Who We Are */
+  .about-grid{
+    flex-direction:column;
+    text-align:center;
+    gap:30px;
+  }
+
+  .about-grid h2{
+    font-size:28px;
+  }
+
+  .about-grid p{
+    font-size:18px;
+  }
+
+  /* Meet Team */
+  .meet-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  .meet-title{
+    font-size:32px;
+  }
+
+  .meet-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
+
+  /* Investors */
+  .investor-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .investors-section-title{
+    font-size:32px;
+  }
+
+  /* Footer */
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+
+/* ---------- Mobile Devices (576px) ---------- */
+@media screen and (max-width: 576px) {
+
+  .logo img{
+    height:55px;
+  }
+
+  .hero{
+    margin-top:75px;
+    min-height:450px;
+  }
+
+  .hero h1{
+    font-size:2rem;
+    line-height:1.3;
+  }
+
+  .hero p{
+    font-size:1rem;
+  }
+
+  .main-heading{
+    font-size:32px;
+    text-align:center;
+  }
+
+  .tagline{
+    text-align:center;
+  }
+
+  .tagline-divider{
+    margin-bottom:30px;
+  }
+
+  .about-grid p{
+    font-size:16px;
+  }
+
+  .meet-team-wrapper{
+    padding:0 15px;
+  }
+
+  .meet-grid{
+    grid-template-columns:1fr;
+  }
+
+  .meet-title{
+    font-size:28px;
+  }
+
+  .meet-name{
+    font-size:1.2rem;
+  }
+
+  .meet-bubble{
+    width:50px;
+    height:50px;
+  }
+
+  .investor-grid{
+    grid-template-columns:1fr;
+  }
+
+  .investor-card img{
+    width:120px;
+  }
+
+  .investors-section-title{
+    font-size:28px;
+  }
+
+  .footer-heading h2{
+    font-size:22px;
+  }
+
+  .footer-col p{
+    font-size:14px;
+  }
+}
+
+
+/* ---------- Extra Small Mobiles (375px) ---------- */
+@media screen and (max-width: 375px) {
+
+  .hero h1{
+    font-size:1.7rem;
+  }
+
+  .main-heading{
+    font-size:28px;
+  }
+
+  .meet-title{
+    font-size:24px;
+  }
+
+  .investors-section-title{
+    font-size:24px;
+  }
+
+  .container{
+    width:92%;
+  }
+}
+
+
+/* ---------- Universal Image Fix ---------- */
+img{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+
+/* ---------- Prevent Overflow ---------- */
+body,
+html{
+  overflow-x:hidden;
 }
