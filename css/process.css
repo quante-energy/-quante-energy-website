@@ -316,7 +316,8 @@ h1, h2, h3, h4 {
 /* LEFT IMAGE */
 .challenges-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
 }
 
@@ -617,7 +618,9 @@ h1, h2, h3, h4 {
   flex: 1;
 }
 .value-image img {
-  width: 95%;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 0px;
 }
 
@@ -686,7 +689,8 @@ h1, h2, h3, h4 {
 
 .left-iot img {
   width: 100%;
-  height: 80%;
+  height: auto;
+  display: block;
   object-fit: cover;
 }
 
@@ -837,4 +841,253 @@ h1, h2, h3, h4 {
         gap: 10px;
         text-align: center;
     }
+}
+
+
+
+
+/* ==========================================
+   RESPONSIVE DESIGN FOR ALL DEVICES
+   ========================================== */
+
+/* Large Tablets */
+@media (max-width: 1024px) {
+
+  .container {
+    width: 95%;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .process-timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .process-timeline3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .value-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .value-image img {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .section-title,
+  .challenges-title {
+    font-size: 2rem;
+  }
+
+  .hero {
+    margin-top: 80px;
+    min-height: 500px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  /* Challenge Section */
+  .challenges-container {
+    grid-template-columns: 1fr;
+  }
+
+  .challenges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .challenges-image img {
+    height: auto;
+  }
+
+  /* Our Solution */
+  .process-timeline3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* 3 Month Plan */
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step,
+  .process-step3 {
+    margin-bottom: 20px;
+  }
+
+  .split-arrow-wrapper {
+    display: none;
+  }
+
+  /* Value Section */
+  .value-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .value-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .circle {
+    width: 110px;
+    height: 110px;
+  }
+
+  .circle::before {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* IOT Section */
+  .iot-section .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-iot,
+  .right-iot {
+    width: 100%;
+  }
+
+  .left-iot img {
+    height: auto;
+  }
+
+  .right-iot {
+    padding: 20px;
+  }
+
+  .iot-title {
+    font-size: 28px;
+  }
+
+  .iot-content {
+    font-size: 18px;
+  }
+
+  /* Highlight Box */
+  .QuantE_Energy_highlight {
+    font-size: 22px;
+    text-align: center;
+    padding: 15px;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+
+  .container {
+    width: 95%;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section-title,
+  .challenges-title {
+    font-size: 1.7rem;
+  }
+
+  .process-step,
+  .process-step3 {
+    padding: 1.2rem;
+  }
+
+  .step-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .step-icon i {
+    font-size: 24px;
+  }
+
+  .bg-number {
+    width: 65px;
+    height: 65px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle::before {
+    width: 75px;
+    height: 75px;
+  }
+
+  .circle span {
+    font-size: 16px;
+  }
+
+  .iot-title {
+    font-size: 22px;
+  }
+
+  .iot-content {
+    font-size: 16px;
+  }
+
+  .QuantE_Energy_highlight {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .footer-heading h2 {
+    font-size: 22px;
+  }
+
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  word-wrap: break-word;
 }
