@@ -158,8 +158,6 @@
         </div>
     </div>
 </section>
-
-</section>
 <section class="section cta" id="cta">
     <div class="container">
         <div class="cta-content">
@@ -594,12 +592,17 @@
       measure();
     })();
 </script>
-
 <script>
-    const navToggle = document.getElementById("navToggle");
-    const navMenu = document.getElementById("navLinks");
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
     navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
+
+      navLinks.classList.toggle("active");
+
+      navToggle.classList.toggle("active");
+
     });
+
 </script>
