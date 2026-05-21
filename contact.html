@@ -247,9 +247,25 @@
 </footer>
 </body>
 </html>
-
-<script src="js/app.js"></script>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!--  navigation hamburger menu -->
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      navToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+        navToggle.classList.toggle("active");
+
+      });
+
+    });
+
+</script>
 <script>
     var lat = 28.57289783572693;
     var lon = 77.37975023691018;

@@ -252,7 +252,24 @@
 
 </body>
 </html>
-<script src="js/app.js"></script>
+<!--  navigation hamburger menu -->
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      navToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+        navToggle.classList.toggle("active");
+
+      });
+
+    });
+
+</script>
 <script>
     (function () {
       const track      = document.getElementById('sliderTrack');

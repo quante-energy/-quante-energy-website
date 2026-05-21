@@ -325,8 +325,24 @@
 
 </body>
 </html>
-<script src="js/app.js"></script>
-<script src="js/team.js"></script>
+<!--  navigation hamburger menu -->
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      navToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+        navToggle.classList.toggle("active");
+
+      });
+
+    });
+
+</script>
 <!-- Investors -->
 <script>
     const cards = document.querySelectorAll(".investor-card");
