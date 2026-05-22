@@ -43,11 +43,12 @@ h1, h2, h3, h4 {
 }
 
 /* Layout */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
+.container{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding-left:20px;
+  padding-right:20px;
 }
 
 .section {
@@ -298,9 +299,11 @@ h1, h2, h3, h4 {
 }
 
 /* RIGHT FORM */
-.contact-form {
-    width: 100%;
-    padding: 60px;
+.contact-form{
+  width:100%;
+  padding:60px;
+  display:grid;
+  gap:1.5rem;
 }
 .tagline {
     letter-spacing: 2px;
@@ -564,4 +567,193 @@ button:hover {
         gap: 10px;
         text-align: center;
     }
+}
+
+
+
+/* ===================================================
+   RESPONSIVE DESIGN - MOBILE / TABLET / LAPTOP
+=================================================== */
+
+@media screen and (max-width:1024px){
+
+  /* Hero */
+  .hero h1{
+    font-size:3rem;
+  }
+
+  /* Contact Section */
+  .contact-section{
+    flex-direction:column;
+  }
+
+  .contact-form{
+    padding:40px;
+  }
+
+  .contact-wrapper{
+    grid-template-columns:1fr;
+    gap:2rem;
+  }
+
+  /* Footer */
+  .footer-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+  }
+}
+
+@media screen and (max-width:768px){
+
+  /* Navbar */
+  .logo img{
+    height:65px;
+  }
+
+  .nav-toggle{
+    display:flex;
+  }
+
+  .nav-links{
+    position:fixed;
+    top:80px;
+    left:-100%;
+    width:100%;
+    height:calc(100vh - 80px);
+    background:#fff;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    gap:2rem;
+    padding-top:40px;
+    transition:.4s;
+  }
+
+  .nav-links.active{
+    left:0;
+  }
+
+  /* Hero */
+  .hero{
+    margin-top:85px;
+    min-height:500px;
+  }
+
+  .hero h1{
+    font-size:2.2rem;
+    padding:0 15px;
+  }
+
+  /* Contact Form */
+  .contact-form{
+    padding:30px 20px;
+  }
+
+  form .row{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  form input{
+    width:100%;
+  }
+
+  .contact-form h2{
+    font-size:28px;
+  }
+
+  /* Map */
+  .map-container{
+    min-height:350px;
+  }
+
+  #map{
+    min-height:350px;
+  }
+
+  .label-box{
+    width:90%;
+    left:5%;
+    top:10px;
+    padding:10px;
+  }
+
+  /* Get Started */
+  .section-title{
+    font-size:2rem;
+  }
+
+  .contact-info{
+    padding:1.5rem;
+  }
+
+  /* Footer */
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .footer-col p{
+    justify-content:center;
+  }
+
+  .social-icons{
+    display:flex;
+    justify-content:center;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    text-align:center;
+    gap:10px;
+  }
+}
+
+@media screen and (max-width:480px){
+
+  /* Logo */
+  .logo img{
+    height:55px;
+  }
+
+  /* Hero */
+  .hero{
+    min-height:420px;
+  }
+
+  .hero h1{
+    font-size:1.8rem;
+    line-height:1.3;
+  }
+
+  /* Contact */
+  .contact-form{
+    padding:20px 15px;
+  }
+
+  .contact-form h2{
+    font-size:24px;
+  }
+
+  textarea{
+    min-height:120px;
+  }
+
+  button,
+  .contact-btn{
+    width:100%;
+  }
+
+  /* Footer */
+  .footer-heading h2{
+    font-size:22px;
+  }
+
+  .footer-brand img{
+    width:80px;
+  }
+
+  .footer-bottom{
+    font-size:12px;
+  }
 }
