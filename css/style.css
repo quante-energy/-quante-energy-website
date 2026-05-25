@@ -565,9 +565,10 @@ h1, h2, h3, h4 {
 }
 
 /*-----------PPA----------------------------*/
-.ppa-section .container{
-    display:flex;
-    min-height:100vh;
+.ppa-section .container {
+    display: flex;
+    min-height: 100vh;
+    align-items: flex-start; /* 👈 THIS fixes top alignment */
 }
 
 .ppa-left {
@@ -608,14 +609,19 @@ h1, h2, h3, h4 {
   gap: 5px;
 }
 .ppa-feature {
-  position: flex;
-  align-items: flex-start;
+  display: flex;
+  align-items: flex-start;   /* Align icon and text from top */
+  gap: 10px;
   padding: 0.5rem;
 }
+
 .ppa-feature i {
   font-size: 25px;
-  color: #27313f;fon
+  color: #27313f;
+  flex-shrink: 0;            /* Prevent icon from shrinking */
+  margin-top: 2px;
 }
+
 .ppa-card h2 {
   font-size: 20px;
   margin: 20px 1;
