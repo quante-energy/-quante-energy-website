@@ -262,7 +262,7 @@ h1, h2, h3, h4 {
 
 /* - Section */
 .hero {
-  margin-top: 102px; /* Adjust for fixed navbar */
+  margin-top: 0; /* Adjust for fixed navbar */
   position: relative;
   height: 100vh;
   min-height: 600px;
@@ -270,6 +270,7 @@ h1, h2, h3, h4 {
   align-items: center;
   color: white;
   overflow: hidden;
+  padding-top: 80px;
 }
 
 .video-background {
