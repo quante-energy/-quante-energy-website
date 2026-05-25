@@ -531,9 +531,9 @@ h1, h2, h3, h4 {
 
 /* Force canvas height */
 #biograph {
-    width  : 100% !important;
-    height : 100% !important;
     display: block;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 /* -----------CTA Section-------------------- */
@@ -1141,6 +1141,8 @@ h1, h2, h3, h4 {
         grid-template-columns:1fr;
         gap:20px;
         padding:30px 15px;
+        align-items: center;
+        text-align: center;
     }
 
     .stat-card{
@@ -1168,6 +1170,21 @@ h1, h2, h3, h4 {
     .bio-para{
         font-size:16px;
         text-align:left;
+    }
+    /* Center Bio Graph */
+    .bio-right{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bio-graph-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #biograph{
+        margin: 0 auto;
     }
 
     /* CTA */
