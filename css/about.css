@@ -592,8 +592,9 @@ h1, h2, h3, h4 {
 
 /* IMAGE */
 .investor-card img {
-  width: 150px;
-  margin-bottom: 20px;
+   width: 150px;
+   display: block;
+   margin: 0 auto 20px auto; /* centers image horizontally */
 }
 
 /* TEXT */
