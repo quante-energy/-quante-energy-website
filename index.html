@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuantE Energy provides innovative solar solutions for housing societies with zero upfront cost. Save up to 50% on electricity bills with our PPA model." />
+    <title>QuantE Energy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="icon" href="img/Final-Quante-new.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="img/Final-Quante-new.png" alt="QuantE Energy Logo" />
+            <!-- <h1 style="color: #F07D00; font-size: xx-large;">QuantE Energy</h1> -->
+        </div>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="process.html">Process</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="updates.html">Updates</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="video-background">
+        <video autoplay muted loop playsinline class="video-background">
+            <source src="video/solar-roof.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1>Building Sustainable Housing Societies</h1>
+        </div>
+    </div>
+</section>
+<section class="stats-section">
+
+    <div class="stat-card">
+        <span class="bg-number">50%</span>
+        <div class="stat-content">
+            <strong class="stat-number">50%</strong>
+            <div class="stat-label">
+                <span class="label-top">BILL</span>
+                <span class="label-bottom">Reduction</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <span class="bg-number">2Cr+</span>
+        <div class="stat-content">
+            <strong class="stat-number">2Cr+</strong>
+            <div class="stat-label">
+                <span class="label-top">POTENTIAL</span>
+                <span class="label-bottom">Savings</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <span class="bg-number">₹0</span>
+        <div class="stat-content">
+            <strong class="stat-number">₹0</strong>
+            <div class="stat-label">
+                <span class="label-top">UPFRONT</span>
+                <span class="label-bottom">Cost</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <span class="bg-number">30s</span>
+        <div class="stat-content">
+            <strong class="stat-number">30s</strong>
+            <div class="stat-label">
+                <span class="label-top">PROCESSING</span>
+                <span class="label-bottom">Time</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <span class="bg-number">20</span>
+        <div class="stat-content">
+            <strong class="stat-number">20</strong>
+            <div class="stat-label">
+                <span class="label-top">SOCIETIES</span>
+                <span class="label-bottom">Impacted</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <span class="bg-number">5t</span>
+        <div class="stat-content">
+            <strong class="stat-number">5t</strong>
+            <div class="stat-label">
+                <span class="label-top">CARBON</span>
+                <span class="label-bottom">Emission Saved</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="circle-section" style="display: none;">
+
+    <div class="circle"></div>
+
+    <h2 class="text">
+        QuantE Energy Tech Pvt. Ltd. is an innovative
+        green energy startup offering IoT-enabled solar,
+        EV, and sustainability solutions to residential
+        societies—a blue ocean market. Our unique OPEX-based
+        model removes CAPEX barriers and ensures hands-free
+        operations, solving two major industry pain points:
+        Affordability and Maintenance.
+    </h2>
+
+</section>
+
+<section class="bio-energy-section" id="bio-energy">
+    <div class="bio-wrapper">
+
+        <div class="bio-left">
+            <h2 class="bio-title">
+                QuantE Energy
+            </h2>
+            <p class="bio-para">
+                We are an innovative green energy startup offering
+                IoT-enabled solar, EV, and sustainability solutions
+                to residential societies—a blue ocean market. Our
+                unique OPEX-based model removes CAPEX barriers and
+                ensures hands-free operations, solving two major industry
+                pain points: Affordability and Maintenance.
+            </p>
+        </div>
+        <div class="bio-right">
+
+            <!-- Chart.js draws inside this canvas -->
+            <div class="bio-graph-wrap">
+                <img src="img/home.jpg" id="biograph" alt="biograph"/>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="section cta" id="cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Together, let's build a brighter, cleaner future for India</h2>
+            <div class="key-takeaways">
+                <div class="takeaway">
+                    <i class="fas fa-sun"></i>
+                    <span>Sustainable Energy Solutions</span>
+                </div>
+                <div class="takeaway">
+                    <i class="fas fa-piggy-bank"></i>
+                    <span>Significant Cost Savings</span>
+                </div>
+                <div class="takeaway">
+                    <i class="fas fa-leaf"></i>
+                    <span>Reduced Carbon Footprint</span>
+                </div>
+                <div class="takeaway">
+                    <i class="fas fa-users"></i>
+                    <span>Empowered Communities</span>
+                </div>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Get Started Today</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="ppa-section">
+        <div class="container">
+            <!-- Left Image -->
+            <div class="ppa-left">
+                <img src="img/ppa.jpg" alt="PPA">
+            </div>
+            <!-- Right Content -->
+            <div class="ppa-right">
+
+                <div class="ppa-item">
+                    <h2 class="ppa-title">How Our PPA Works</h2>
+                    <p class="ppa-content">
+                        QuantE Energy Tech Pvt Ltd is pioneering green energy solutions like
+                        Solar, EV etc for residential societies, with a unique IoT enabled
+                        OPEX-based PPA models that simplifies asset management.
+                    </p>
+                    <div class="ppa-features">
+                        <div class="ppa-feature">
+                            <i class="fas fa-file-signature"></i>
+                            <p>An onsite solar PPA is a contract between a developer and a customer with suitable space to install a solar PV system.</p>
+                        </div>
+                        <div class="ppa-feature">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <p>The customer only pays for the energy produced by the plant. Hence, the incentives of both parties are fully aligned.</p>
+                        </div>
+                        <div class="ppa-feature">
+                            <i class="fas fa-tools"></i>
+                            <p><strong>The developer installs and maintains the solar PV system</strong> for a fixed term and sells the electricity to the customer at a tariff much lower than the grid.</p>
+                        </div>
+                        <div class="ppa-feature">
+                            <i class="fas fa-piggy-bank"></i>
+                            <p><strong>The customer pays no upfront costs (capex)</strong> for the solar PV system and enjoys the savings, energy security and sustainability of solar power delivered at a fixed tariff.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="QuantE_Energy_highlight">
+            <p>No CAPEX, no hassles, no risks. Just green savings</p>
+        </div>
+    </div>
+</section>
+<section class="portfolio-section" style="display: none;">
+
+    <div class="section-header">
+        <div>
+            <div class="section-tag">QuantE</div>
+            <h2 class="section-title">Updates & Informations</h2>
+        </div>
+        <div class="slider-nav">
+            <button class="nav-btn" id="prevBtn" aria-label="Previous">
+                <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="nav-btn" id="nextBtn" aria-label="Next">
+                <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="slider-viewport" id="sliderViewport">
+        <div class="slider-track" id="sliderTrack">
+
+            <!-- Card 1 -->
+            <div class="portfolio-card">
+                <div class="card-image-wrap">
+                    <img src="img/blog/blog_4.jpeg" alt="Building Fast">
+                    <div class="card-overlay">
+                        <span class="overlay-category">Renewable</span>
+                        <span class="overlay-title">Building Fast</span>
+                        <a href="https://www.linkedin.com/posts/ujwal-sutaria_cleanenergy-sustainability-renewable-activity-7369295531652673540-2QAv?" class="overlay-link"></a>
+                    </div>
+                    <div class="card-arrow">
+                        <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <a href="https://www.linkedin.com/posts/ujwal-sutaria_cleanenergy-sustainability-renewable-activity-7369295531652673540-2QAv?"></a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Renewable</span>
+                    <a href="https://www.linkedin.com/posts/ujwal-sutaria_cleanenergy-sustainability-renewable-activity-7369295531652673540-2QAv?" class="card-title">Building Fast</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="portfolio-card">
+                <div class="card-image-wrap">
+                    <img src="img/blog/blog_5.jpeg" alt="Solar Energy">
+                    <div class="card-arrow">
+                        <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <a href="https://ascendants.in/business-stories/quante-energy-raises-500k-seed-tdv-partners-angels/"></a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Renewable</span>
+                    <a href="https://ascendants.in/business-stories/quante-energy-raises-500k-seed-tdv-partners-angels/" class="card-title">Solar Energy</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="portfolio-card">
+                <div class="card-image-wrap">
+                    <img src="img/blog/blog_7.jpeg" alt="Green Energy">
+                    <div class="card-arrow">
+                        <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <a href="https://repowerindia.in/quante-energy-raises-500000-from-tdv-partners-and-marquee-angel-investors-to-democratize-solar-and-clean-energy-access-in-india/"></a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="card-category">RePower</span>
+                    <a href="https://repowerindia.in/quante-energy-raises-500000-from-tdv-partners-and-marquee-angel-investors-to-democratize-solar-and-clean-energy-access-in-india/" class="card-title">India</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="portfolio-card">
+                <div class="card-image-wrap">
+                    <img src="img/blog/blog_8.jpeg" alt="Solar Panels">
+                    <div class="card-overlay">
+                        <span class="overlay-category">Renewable</span>
+                        <span class="overlay-title">Solar Panels</span>
+                        <a href="#" class="overlay-link"></a>
+                    </div>
+                    <div class="card-arrow">
+                        <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Renewable</span>
+                    <a href="https://energy.economictimes.indiatimes.com/news/renewable/quante-energy-secures-500k-seed-funding-to-power-residential-solar-push/123697003" class="card-title">Solar Panels</a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="portfolio-card">
+                <div class="card-image-wrap">
+                    <img src="img/blog/blog_9.jpeg" alt="Blog 5">
+                    <div class="card-arrow">
+                        <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <a href="https://energy.economictimes.indiatimes.com/news/renewable/quante-energy-secures-500k-seed-funding-to-power-residential-solar-push/123697003"></a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Renewable</span>
+                    <a href="https://mercomindia.com/cleantech-startup-quante-energy-raises-500000-from-tdv-angel-investors" class="card-title">Renewable Energy</a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="portfolio-card">
+                <div class="card-image-wrap">
+                    <img src="img/blog/blog_6.jpeg" alt="New Projects">
+                    <div class="card-arrow">
+                        <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Nature</span>
+                    <a href="#" class="card-title">New Projects</a>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="portfolio-card">
+                <div class="card-image-wrap">
+                    <img src="img/blog/blog_3.jpeg" alt="New Projects">
+                    <div class="card-arrow">
+                        <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <a href="https://inshorts.com/en/news/quante-energy-raises--500-000-to-scale-rooftop-solar-push-1756977739973"></a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Nature</span>
+                    <a href="https://inshorts.com/en/news/quante-energy-raises--500-000-to-scale-rooftop-solar-push-1756977739973" class="card-title">New Projects</a>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="portfolio-card">
+                <div class="card-image-wrap">
+                    <img src="img/blog/blog_2.jpeg" alt="New Projects">
+                    <div class="card-arrow">
+                        <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <a href="https://www.constructionworld.in/energy-infrastructure/power-and-renewable-energy/quante---s-zero-capex-solar-slashes-housing-bills-by-50-/86806"></a>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <span class="card-category">Infrastructure Energy</span>
+                    <a href="https://www.constructionworld.in/energy-infrastructure/power-and-renewable-energy/quante---s-zero-capex-solar-slashes-housing-bills-by-50-/86806" class="card-title">Power & Renewable Energy</a>
+                </div>
+            </div>
+
+        </div><!-- /.slider-track -->
+    </div><!-- /.slider-viewport -->
+
+    <div class="slider-footer">
+        <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="slide-count" id="slideCount">1 / 8</span>
+    </div>
+
+</section>
+
+<footer class="main-footer">
+    <div class="container">
+
+        <!-- TOP SECTION -->
+        <div class="footer-top" style="display: none">
+
+            <!-- LEFT LOGO -->
+
+
+            <!-- RIGHT BIG TEXT -->
+            <div class="footer-heading">
+                <h2>
+                    Innovative Energy Solutions for Housing Societies
+                </h2>
+            </div>
+
+        </div>
+
+        <!-- MIDDLE GRID -->
+        <div class="footer-grid">
+
+            <!-- CONTACT -->
+            <div class="footer-col">
+                <h4>Start a conversation:</h4>
+                <div class="footer-brand">
+                    <img src="img/Final-Quante-new.png" alt="QuantE Energy">
+                </div>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    info@quanterenewables.com
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    +91 98114 63095
+                </p>
+            </div>
+
+            <!-- ADDRESS -->
+            <div class="footer-col">
+                <h4>Find Our Address:</h4>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    QuantE Energy Tech Private Limited,<br>
+                    615, Tower A, 6th Floor, Spectrum Mall,<br>
+                    Sector 75, Noida, Uttar Pradesh 201301
+                </p>
+            </div>
+
+            <!-- SOCIAL -->
+            <div class="footer-col">
+                <h4>Our Social:</h4>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/114093931/admin/dashboard/" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61588737334330" target="_blank"><i class="fab fa-facebook"></i></a>
+
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/quante_energy/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="updates.html">Updates</a></li>
+                    <li><a href="guarantee.html">Guarantee</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <p style="display: none;">Terms & Conditions</p>
+            <p style="display: none;">Privacy Policy</p>
+            <p>© 2025 QuantE Energy Tech Private Limited</p>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>
+<script src="js/app.js"></script>
+<script>
+    const circle = document.querySelector(".circle");
+
+    document.addEventListener("mousemove", (e) => {
+
+        // calculate movement range
+        let x = e.clientX * 0.1;
+        let y = e.clientY * 0.1;
+
+        circle.style.transform =
+            `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+    });
+</script>
+<script>
+    (function () {
+      const track      = document.getElementById('sliderTrack');
+      const viewport   = document.getElementById('sliderViewport');
+      const prevBtn    = document.getElementById('prevBtn');
+      const nextBtn    = document.getElementById('nextBtn');
+      const progress   = document.getElementById('progressFill');
+      const countEl    = document.getElementById('slideCount');
+      const cards      = Array.from(track.querySelectorAll('.portfolio-card'));
+
+      let currentIndex = 0;
+      let visibleCount = 3;
+      let cardWidth    = 0;
+      let gap          = 24;
+      let maxIndex     = 0;
+      let isDragging   = false;
+      let startX       = 0;
+      let startTranslate = 0;
+      let currentTranslate = 0;
+
+      function getVisibleCount() {
+        const w = viewport.offsetWidth;
+        if (w < 600)  return 1;
+        if (w < 900)  return 2;
+        return 3;
+      }
+
+      function measure() {
+        visibleCount   = getVisibleCount();
+        cardWidth      = cards[0].offsetWidth;
+        maxIndex       = Math.max(0, cards.length - visibleCount);
+        currentIndex   = Math.min(currentIndex, maxIndex);
+        updateSlider(false);
+      }
+
+      function getTranslate(index) {
+        return -(index * (cardWidth + gap));
+      }
+
+      function updateSlider(animate = true) {
+        currentTranslate = getTranslate(currentIndex);
+        track.style.transition = animate
+          ? 'transform 0.55s cubic-bezier(0.4, 0, 0.2, 1)'
+          : 'none';
+        track.style.transform = `translateX(${currentTranslate}px)`;
+
+        const pct = maxIndex === 0 ? 100 : ((currentIndex / maxIndex) * 100);
+        progress.style.width = pct + '%';
+        countEl.textContent  = (currentIndex + 1) + ' / ' + (maxIndex + 1);
+
+        prevBtn.style.opacity = currentIndex === 0 ? '0.35' : '1';
+        nextBtn.style.opacity = currentIndex === maxIndex ? '0.35' : '1';
+      }
+
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) { currentIndex--; updateSlider(); }
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex < maxIndex) { currentIndex++; updateSlider(); }
+      });
+
+      // ── Drag / Swipe ────────────────────────────────────
+      function dragStart(e) {
+        isDragging = true;
+        startX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
+        startTranslate = currentTranslate;
+        track.style.transition = 'none';
+      }
+
+      function dragMove(e) {
+        if (!isDragging) return;
+        const x    = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
+        const diff = x - startX;
+        track.style.transform = `translateX(${startTranslate + diff}px)`;
+      }
+
+      function dragEnd(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        const x    = e.type === 'touchend' ? e.changedTouches[0].clientX : e.clientX;
+        const diff = x - startX;
+        if (diff < -50 && currentIndex < maxIndex) currentIndex++;
+        else if (diff > 50 && currentIndex > 0)    currentIndex--;
+        updateSlider();
+      }
+
+      viewport.addEventListener('mousedown',   dragStart);
+      viewport.addEventListener('mousemove',   dragMove);
+      viewport.addEventListener('mouseup',     dragEnd);
+      viewport.addEventListener('mouseleave',  dragEnd);
+      viewport.addEventListener('touchstart',  dragStart, { passive: true });
+      viewport.addEventListener('touchmove',   dragMove,  { passive: true });
+      viewport.addEventListener('touchend',    dragEnd);
+
+      // ── Init ────────────────────────────────────────────
+      window.addEventListener('resize', measure);
+      measure();
+    })();
+</script>
+<!--  navigation hamburger menu -->
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      navToggle.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+        navToggle.classList.toggle("active");
+
+      });
+
+    });
+
+</script>

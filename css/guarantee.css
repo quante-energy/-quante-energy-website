@@ -1,0 +1,593 @@
+
+/* Modern CSS with animations and responsive design */
+
+:root {
+  --primary-color: #27313f;
+  --secondary-color: #FF9A33;
+  --text-color: #27313f;
+  --light-bg: #f0f9f4;
+  --dark-bg: #27313f;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: #27313f;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #27313f;
+}
+
+/* Layout */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.section {
+  padding: 4rem 1rem;
+}
+
+.section.light {
+  background-color: white;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 5000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.navbar .container h1,
+.navbar .container .logo {
+  display: flex;
+  align-items: center;
+  margin: 0; /* Remove extra margin */
+  padding: 0; /* Remove extra padding */
+}
+
+.logo img {
+  height: 90px; /* Adjust size as needed */
+  /* margin-right: 10px; Adjust space between h1 and logo */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #27313f;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--text-color);
+}
+
+.nav-btn {
+  background: var(--primary-color);
+  color: white !important;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 30px;
+  height: 3px;
+  background: var(--text-color);
+  transition: var(--transition);
+}
+/* - Section */
+.hero {
+  margin-top: 102px; /* Adjust for fixed navbar */
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease 0.2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.hero-cta {
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease 0.4s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/*------------------ Quante promises --------------*/
+.promises-section {
+    background : var(--bio-bg);
+    padding    : 90px 0;
+    width      : 100%;
+    overflow   : hidden;         /* clip scroll animations */
+}
+.promises-wrapper {
+    max-width               : 1280px;
+    margin                  : 0 auto;
+    padding                 : 0 70px;
+    display                 : grid;
+    grid-template-columns   : 1fr 1.15fr;   /* text | chart */
+    gap                     : 80px;
+    align-items             : center;
+}
+.promises-right {
+    display     : flex;
+    align-items : flex-start;
+    gap         : 28px;
+
+    /* scroll-in: slides from right */
+    opacity    : 5;
+    transform  : translateX(40px);
+    transition : opacity 0.85s ease 0.15s, transform 0.85s ease 0.15s;
+}
+.promises-right.visible {
+    opacity   : 1;
+    transform : translateX(0);
+}
+
+/* Chart canvas wrapper */
+.promises-pic {
+    flex      : 1;
+    min-width : 0;
+    background: var(--bio-bg);
+}
+/* Force canvas height */
+#promisespic {
+    width  : 100% !important;
+    height : 100% !important;
+    display: block;
+}
+
+/*----------what's covered--------------------------------------------*/
+.solutions-checklist {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+/* GRID like your screenshot */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #eee;
+}
+
+/* CARD STYLE */
+.solution-card {
+  padding: 40px 25px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  transition: all 0.4s ease;
+
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* ICON */
+.solution-card i {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+/* TEXT */
+.solution-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* HOVER EFFECT */
+.solution-card:hover {
+  background: var(--secondary-color);
+  color: #fff;
+  transform: translateY(-8px);
+}
+
+.solution-card:hover i {
+  color: #fff;
+}
+
+/* ANIMATION ACTIVE */
+.solution-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*----------what's not covered--------------------------------------------*/
+.energy-alt {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+.energy-container {
+   display: flex;
+   align-items: center;
+   gap: 50px;
+ }
+.slider {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.slides {
+  position: relative;
+}
+.slide {
+  width: 100%;
+  display: none;
+}
+.slide.active {
+  display: block;
+}
+.content-box {
+  flex: 1;
+}
+.content-box h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.tag {
+  color: #777;
+  display: block;
+  margin-bottom: 30px;
+}
+.progress-item {
+  margin-bottom: 25px;
+}
+.label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.bar {
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  background: #222;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+.fill.orange {
+  background: #FF9A33;
+}
+
+
+
+
+
+/*--------------- what happens if ----------------------*/
+.happens-section .happens-container {
+  display: flex;
+  height: 100vh;
+}
+.happens-heading h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.left {
+  width: 50%;
+}
+
+.left img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.right {
+  width: 50%;
+  padding: 60px;
+  background: var(--light-bg);
+}
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.accordion-title {
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Arrow Icon */
+.accordion-title::after {
+  content: "⌄";
+  position: absolute;
+  right: 0;
+  transition: 0.3s;
+}
+
+/* Rotate when active */
+.accordion-item.active .accordion-title::after {
+  transform: rotate(180deg);
+}
+.accordion-content {
+  display: none;
+  margin-top: 10px;
+  color: #666;
+  line-height: 1.6;
+}
+/* Show active content */
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/*-------------- how we're different----------------- */
+.different-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.different-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.different-card {
+  position: relative;
+  padding: 50px;
+}
+
+.different-heading h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.package-name {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #27313f;
+  margin-top: 40px;
+}
+
+.different-card h2 {
+  font-size: 20px;
+  margin: 20px 1;
+}
+.yes i {
+  color: green;
+  margin-right: 10px;
+}
+
+
+/*-----Footer----*/
+.main-footer {
+    background: #27313f;
+    color: #fff;
+    padding: 20px 0 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* TOP SECTION */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.footer-brand img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-heading {
+  text-align: center;
+  padding-top: 20px;   /* space from top */
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-heading h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.footer-heading p {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* GRID */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    color: #aaa;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+/* ICON STYLE */
+.footer-col i {
+    color: var(--secondary-color);
+    margin-top: 4px;
+}
+
+/* SOCIAL */
+.social-icons a {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: var(--transition);
+}
+.footer-links a:hover {
+  color: var(--secondary-color);
+}
+/* BOTTOM */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-heading h2 {
+        font-size: 28px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
