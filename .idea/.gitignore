@@ -1,7 +1,8 @@
 node_modules/
+workspace.xml
 .idea/
 .vscode/
 *.iml
 video/
 .DS_Store
-.idea/workspace.xml
+
