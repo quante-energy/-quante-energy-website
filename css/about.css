@@ -573,25 +573,11 @@ h1, h2, h3, h4 {
 }
 
 /* GRID like your reference */
-.investor-grid{
-    display:flex;
-    flex-direction:column;
+.investor-grid {
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));  gap: 0;
+  border: 1px solid #eee;
 }
-
-.investor-row{
-    display:flex;
-    justify-content:center;
-}
-
-.investor-row .investor-card{
-    width:25%;
-}
-
-.second-row{
-    width:100%;
-    margin:0 auto;
-}
-
 
 /* CARD STYLE */
 .investor-card {
