@@ -512,6 +512,15 @@ button:hover {
     color: var(--secondary-color);
     margin-top: 4px;
 }
+.footer-col p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-col p a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
 
 /* SOCIAL */
 .social-icons a {
