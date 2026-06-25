@@ -327,11 +327,26 @@ h1, h2, h3, h4 {
   line-height: 1.6;
   animation: fadeInUp 1s ease;
 }
+
 .hero-cta {
   margin-bottom: 3rem;
   animation: fadeInUp 1s ease 0.4s;
   opacity: 0;
   animation-fill-mode: forwards;
+}
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.hero-btn:hover {
+    background: var(--primary-color);
 }
 
 .stats-section {
@@ -506,6 +521,20 @@ h1, h2, h3, h4 {
     color: #27313f;
     text-align: justify;
 }
+.bio-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.bio-btn:hover {
+    background: var(--primary-color);
+}
 
 .bio-right {
     display     : flex;
@@ -637,6 +666,21 @@ h1, h2, h3, h4 {
   font-size: 20px;
   margin: 20px 1;
 }
+.ppa-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.ppa-btn:hover {
+    background: var(--secondary-color);
+}
+
 
 /*------Update & Information-------*/
 .portfolio-section {
