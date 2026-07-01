@@ -856,6 +856,16 @@ h1, h2, h3, h4 {
   /* Investors */
   .investor-grid{
     grid-template-columns:repeat(2,1fr);
+    gap: 15px;
+  }
+  .investor-card:nth-child(1),
+  .investor-card:nth-child(2),
+  .investor-card:nth-child(3),
+  .investor-card:nth-child(4),
+  .investor-card:nth-child(5),
+  .investor-card:nth-child(6),
+  .investor-card:nth-child(7){
+    grid-column: auto;
   }
 
   .investors-section-title{
@@ -936,6 +946,16 @@ h1, h2, h3, h4 {
 
   .investor-grid{
     grid-template-columns:1fr;
+    gap: 15px;
+  }
+  .investor-card:nth-child(1),
+  .investor-card:nth-child(2),
+  .investor-card:nth-child(3),
+  .investor-card:nth-child(4),
+  .investor-card:nth-child(5),
+  .investor-card:nth-child(6),
+  .investor-card:nth-child(7){
+    grid-column: auto;
   }
 
   .investor-card img{
