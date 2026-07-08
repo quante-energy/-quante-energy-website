@@ -602,7 +602,7 @@ h1, h2, h3, h4 {
 .ppa-section .container {
     padding: 10px 0;
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     min-height: auto !important;
     height: auto !important;
 }
@@ -619,7 +619,8 @@ h1, h2, h3, h4 {
 }
 .ppa-left img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 /* Right Content */
