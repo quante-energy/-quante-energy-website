@@ -47,7 +47,7 @@
   --primary-color: #27313f;
   --secondary-color: #FF9A33;
   --text-color: #27313f;
-  --light-bg: #f0f9f4;
+  --light-bg: #ffffff;
   --dark-bg: #27313f;
   --transition: all 0.3s ease;
 }
@@ -560,7 +560,7 @@ h1, h2, h3, h4 {
 .bio-graph-wrap {
     flex      : 1;
     min-width : 0;
-    background: var(--bio-bg);
+    background: var(--light-bg);
 }
 
 /* Force canvas height */
@@ -602,7 +602,7 @@ h1, h2, h3, h4 {
 .ppa-section .container {
     padding: 10px 0;
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     min-height: auto !important;
     height: auto !important;
 }
@@ -619,7 +619,8 @@ h1, h2, h3, h4 {
 }
 .ppa-left img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 /* Right Content */
