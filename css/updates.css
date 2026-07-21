@@ -533,6 +533,37 @@ h1, h2, h3, h4 {
     box-shadow:0 12px 25px rgba(240,125,0,.25);
 }
 
+/*--------go-back-to-updates--------------*/
+.go-back-to-updates{
+    margin-top:40px;
+    padding-top:25px;
+    border-top:1px solid #e5e7eb;
+}
+.back-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 24px;
+    background:#27313f;
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    border-radius:50px;
+    transition:all .3s ease;
+    box-shadow:0 6px 18px rgba(39,49,63,.15);
+}
+.back-btn i{
+    transition:transform .3s ease;
+}
+.back-btn:hover{
+    background:#F07D00;
+    transform:translateY(-2px);
+    box-shadow:0 10px 24px rgba(240,125,0,.25);
+}
+.back-btn:hover i{
+    transform:translateX(-4px);
+}
 
 /*-----Footer----*/
 .main-footer {
