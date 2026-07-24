@@ -228,56 +228,6 @@
     </div>
 </section>
 
-<section class="value-section">
-    <div class="container">
-        <h2 class="section-title value-title">Value To End Customer</h2>
-
-        <div class="value-wrapper">
-            <!-- Left Image -->
-            <div class="value-image">
-                <img src="img/value_2_customer.jpg" alt="Value To Customer">
-            </div>
-
-            <!-- Right Stats -->
-            <div class="value-stats">
-
-                <div class="stat-card">
-                    <div class="circle" data-value="50">
-                        <span>50%</span>
-                    </div>
-                    <h3>Up To 50%</h3>
-                    <p>Electricity Bill Reduction</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="circle" data-value="0">
-                        <span>0%</span>
-                    </div>
-                    <h3>No O&M Headache</h3>
-                    <p>For Solar Asset</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="circle" data-value="100000">
-                        <span>2 Cr+</span>
-                    </div>
-                    <h3>Rs. 2 Cr+</h3>
-                    <p>Potential Savings</p>
-                </div>
-
-                <div class="stat-card">
-                    <div class="circle" data-value="100">
-                        <span>Real Time IOT Based</span>
-                    </div>
-                    <h3>Real Time IOT Based</h3>
-                    <p>Updates on Whatsapp</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
 <section>
     <div class="iot-section">
         <div class="container">
@@ -448,28 +398,4 @@
     cards.forEach(card => {
       observer.observe(card);
     });
-</script>
-<!--  Value to Customer -->
-<script>
-    const circles = document.querySelectorAll(".circle");
-
-circles.forEach(circle => {
-  let value = circle.getAttribute("data-value");
-  let start = 0;
-
-  let interval = setInterval(() => {
-    start++;
-
-    circle.style.background = `conic-gradient(
-      #FF9A33 ${start * 3.6}deg,
-      #27313f 0deg
-    )`;
-
-    circle.querySelector("span").innerText = start + "";
-
-    if (start >= value) {
-      clearInterval(interval);
-    }
-  }, 15);
-});
 </script>
