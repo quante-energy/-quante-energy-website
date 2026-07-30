@@ -251,6 +251,47 @@
     </div>
 </section>
 
+<section class="section covered-checklist" id="coverage">
+    <div class="container">
+
+        <h2 class="section-title">What’s Covered</h2>
+
+        <div class="covered-grid">
+
+            <div class="covered-card">
+                <i class="fas fa-solar-panel"></i>
+                <h3>Opex-Based Model</h3>
+            </div>
+
+            <div class="covered-card">
+                <i class="fas fa-bolt"></i>
+                <h3>IoT-Integrated Solution</h3>
+            </div>
+
+            <div class="covered-card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Financial Structuring via AIF</h3>
+            </div>
+
+            <div class="covered-card">
+                <i class="fas fa-plug"></i>
+                <h3>Energy-as-a-Service Expansion</h3>
+            </div>
+
+            <div class="covered-card">
+                <i class="fas fa-tachometer-alt"></i>
+                <h3>EPC Partnerships for Scale</h3>
+            </div>
+
+            <div class="covered-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Industry-Leading Expertise</h3>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
 <footer class="main-footer">
     <div class="container">
@@ -398,4 +439,23 @@
     cards.forEach(card => {
       observer.observe(card);
     });
+</script>
+
+<!--------What's Covered---------->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+       const coveredCards = document.querySelectorAll(".covered-card");
+
+       const observer = new IntersectionObserver((entries) => {
+           entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                   entry.target.classList.add("show");
+               }
+           });
+       }, {
+           threshold: 0.2
+       });
+
+       coveredCards.forEach(card => observer.observe(card));
+   });
 </script>
