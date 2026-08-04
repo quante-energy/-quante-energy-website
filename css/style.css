@@ -449,41 +449,6 @@ h1, h2, h3, h4 {
     font-size: 18px;
   }
 }
-/*--------------INTRODUCTION-SECTION------------------------------ */
-.intro-section {
-    position: relative;
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px;
-    overflow: hidden;
-}
-
-/* TEXT */
-.intro-text {
-    font-size: 30px;
-    max-width: 900px;
-    line-height: 1.4;
-    z-index: 2;
-    position: relative;
-}
-
-/* YELLOW CIRCLE */
-.background-circle {
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    background: #ff9A33;
-    border-radius: 50%;
-    z-index: 1;
-
-    /* initial center */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 /* -------------bio energy section ----------------*/
 .bio-energy-section {
@@ -729,6 +694,43 @@ h1, h2, h3, h4 {
   }
 
 }
+
+/*--------------INTRODUCTION-SECTION------------------------------ */
+.intro-section {
+    position: relative;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    overflow: hidden;
+}
+
+/* TEXT */
+.intro-text {
+    font-size: 30px;
+    max-width: 900px;
+    line-height: 1.4;
+    z-index: 2;
+    position: relative;
+}
+
+/* YELLOW CIRCLE */
+.background-circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: #ff9A33;
+    border-radius: 50%;
+    z-index: 1;
+
+    /* initial center */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /*-----------PPA----------------------------*/
 .ppa-section .container {
     padding: 10px 0;
