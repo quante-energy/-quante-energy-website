@@ -351,23 +351,24 @@ h1, h2, h3, h4 {
 
 .stats-section {
   display: grid;
-  grid-template-columns:repeat(3,1fr);
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  gap: 40px 60px;
+  gap: 40px;
   padding: 60px 40px;
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto; /* center properly */
+  margin: 0 auto;
 }
 
 .stat-card {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
-  min-width: 250px;
-  min-height: 100px; /* alignment fix */
+  width: 100%;
+  min-width: 0;
+  min-height: 100px;
 }
 
 /* FIXED font + layering */
@@ -469,7 +470,7 @@ h1, h2, h3, h4 {
 
 .bio-left {
     max-width: 600px;
-    padding: 20px;
+    padding: 0;
 }
 .bio-tagline {
     font-size: 18px;
@@ -574,10 +575,11 @@ h1, h2, h3, h4 {
 }
 
 .value-wrapper {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 40px;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 0;
 }
 
 /* LEFT IMAGE */
@@ -593,7 +595,6 @@ h1, h2, h3, h4 {
 
 /* RIGHT GRID */
 .value-stats {
-  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
@@ -735,7 +736,8 @@ h1, h2, h3, h4 {
 .ppa-section .container {
     padding: 10px 0;
     display: flex;
-    align-items: stretch;
+    align-items: flex-start;
+    gap: 70px;
     min-height: auto !important;
     height: auto !important;
 }
@@ -746,7 +748,7 @@ h1, h2, h3, h4 {
 
 /* Left Image */
 .ppa-left {
-    width: 50%;
+    width: calc(50% - 35px);
     display: flex;
     align-items: flex-start;
 }
@@ -758,10 +760,10 @@ h1, h2, h3, h4 {
 }
 /* Right Content */
 .ppa-right {
-    width: 50%;
-    padding: 0 30px; /* Remove top padding */
+    width: calc(50% - 35px);
+    padding: 0;
     margin-top: 0;
-    align-self: flex-start;
+    align-self: center;
 }
 
 .ppa-item {
@@ -779,7 +781,10 @@ h1, h2, h3, h4 {
 .ppa-title {
     font-size: 40px;
     font-weight: 600;
-    margin-top: 0; /* Remove default top margin */
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 0 30px 0;
+    color: var(--primary-color);
 }
 .ppa-features {
   font-size: 15px;
@@ -1303,6 +1308,7 @@ h1, h2, h3, h4 {
     /* PPA */
     .ppa-section .container{
         flex-direction:column;
+        gap: 40px;
         height:auto;
     }
 
