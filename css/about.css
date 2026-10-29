@@ -413,11 +413,13 @@ h1, h2, h3, h4 {
     to   { transform: scaleX(1); }
 }
 
-.meet-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
+.meet-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
 }
+
 .meet-card {
     display        : flex;
     flex-direction : column;
@@ -439,6 +441,7 @@ h1, h2, h3, h4 {
 .meet-card:nth-child(3) { transition-delay: 0.29s; }
 .meet-card:nth-child(4) { transition-delay: 0.41s; }
 .meet-card:nth-child(5) { transition-delay: 0.53s; }
+.meet-card:nth-child(6) { transition-delay: 0.65s; }
 
 /* IMAGE WRAPPER Portrait ratio trick using padding-bottom */
 .meet-img-wrap {
@@ -526,14 +529,28 @@ h1, h2, h3, h4 {
     color : var(--secondary-color);
 }
 /* RESPONSIVE BREAKPOINTS */
+
+/* Tablet and mobile: keep all 6 people in one row */
 @media (max-width: 768px) {
     .meet-team-wrapper {
-        padding : 0 32px;
+        padding: 0 20px;
     }
+
     .meet-grid {
-        grid-template-columns : repeat(2, 1fr);
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .meet-name {
+        font-size: 0.8rem;
+    }
+
+    .meet-role {
+        font-size: 0.5rem;
+        letter-spacing: 0.05em;
     }
 }
+
 @media (max-width: 768px) {
     .meet-team-section {
         padding : 50px 0 70px;
